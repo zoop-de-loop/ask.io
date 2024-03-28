@@ -45,11 +45,41 @@
 		}
 	}
 }
-@media only screen and (max-height: 700px) {
-	.main {
-		.LinkCard {
-			.h2 {
-				font-size: 2rem;
+@media only screen and ((max-height: 700px) or (max-width: 900px)) {
+	/* making sure linkcard headers dont overlap */
+	.LinkCard {
+		.h2 {
+			font-size: 1.75rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.LinkCard {
+		justify-content: flex-start;
+		width: 100%;
+		height: 15%;
+		.h2 {
+			top: auto;
+			right: 5%;
+		}
+		flex-direction: row;
+		.circleContainer {
+			top: 0;
+
+			flex-direction: row;
+			justify-content: space-evenly;
+
+			height: 100%;
+			width: 50%;
+			.bigCircle {
+				height: 70%;
+			}
+			.mediumCircle {
+				height: 38%;
+			}
+			.smallCircle {
+				height: 20%;
 			}
 		}
 	}
