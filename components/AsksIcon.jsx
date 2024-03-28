@@ -1,15 +1,9 @@
 import React from "react";
-
+import styles from "@/styles/Home.module.scss";
 export default function AsksIcon() {
 	return (
-		<svg
-			width='125'
-			height='125'
-			viewBox='0 0 125 125'
-			fill='none'
-			xmlns='http://www.w3.org/2000/svg'
-			xmlnsXlink='http://www.w3.org/1999/xlink'>
-			<rect width='125' height='125' fill='url(#pattern0)' />
+		<svg viewBox='0 0 125 125' fill='none' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink'>
+			<rect className={styles.rect} fill='url(#pattern0)' />
 			<defs>
 				<pattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'>
 					<use xlinkHref='#image0_40_68' transform='scale(0.0111111)' />
