@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<>
 			<header className={styles.header}>
-				<AccountInfo src={"/lio_img.png"} fullName='Lio Giladi' day='9' />
+				<AccountInfo profilePictureSrc={"/lio_img.png"} fullName='Lio Giladi' day='9' />
 				<h1 className={styles.h1}>Ask.io</h1>
 			</header>
 			<main className={styles.main}>
