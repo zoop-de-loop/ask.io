@@ -4,7 +4,7 @@ import LinkCardStyles from "@/styles/LinkCard.module.scss";
 export default function LinkCard(props) {
 	return (
 		<a className={LinkCardStyles.LinkCard} href={`#${props.name}`}>
-			<h2 className={LinkCardStyles.h2}>{props.name}</h2>
+			<h2>{props.name}</h2>
 
 			<div className={LinkCardStyles.circleContainer}>
 				<div className={LinkCardStyles.bigCircle}>

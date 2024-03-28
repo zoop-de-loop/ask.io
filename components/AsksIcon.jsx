@@ -8,7 +8,7 @@ export default function AsksIcon() {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 			xmlnsXlink='http://www.w3.org/1999/xlink'>
-			<rect className={IconStyles.rect} fill='url(#pattern0)' />
+			<rect fill='url(#pattern0)' />
 			<defs>
 				<pattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'>
 					<use xlinkHref='#image0_40_68' transform='scale(0.0111111)' />

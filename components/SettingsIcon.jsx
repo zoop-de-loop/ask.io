@@ -8,7 +8,7 @@ export default function SettingsIcon() {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 			xmlnsXlink='http://www.w3.org/1999/xlink'>
-			<rect className={IconStyles.rect} x='0.916504' fill='url(#pattern3)' />
+			<rect x='0.916504' fill='url(#pattern3)' />
 			<defs>
 				<pattern id='pattern3' patternContentUnits='objectBoundingBox' width='1' height='1'>
 					<use xlinkHref='#image0_40_70' transform='matrix(0.00961538 0 0 0.01 0.0192308 0)' />

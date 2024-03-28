@@ -7,20 +7,20 @@
 	color: white;
 	gap: 1.25rem;
 	font-size: 1.75rem;
-	.div {
+	div {
 		display: flex;
 		gap: 0.313rem;
-		.p {
+		p {
 			display: block;
 		}
 		.date {
 			display: block;
-			.span {
+			span {
 				display: none;
 			}
 		}
 	}
-	.img {
+	img {
 		height: 4rem;
 		aspect-ratio: 1 / 1;
 		border-radius: 50%;
@@ -30,19 +30,19 @@
 @media only screen and (max-width: 800px) {
 	.accountInfo {
 		gap: 0.2rem;
-		.div {
-			.p {
+		div {
+			p {
 				display: none;
 			}
 			.date {
 				display: flex;
 				font-size: 1rem;
-				.span {
+				span {
 					display: block;
 				}
 			}
 		}
-		.img {
+		img {
 			height: 2.5rem;
 			aspect-ratio: 1 / 1;
 			border-radius: 50%;
