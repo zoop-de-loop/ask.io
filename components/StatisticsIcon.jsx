@@ -1,10 +1,14 @@
 import React from "react";
-import styles from "@/styles/Home.module.scss";
-
+import IconStyles from "@/styles/Icons.module.scss";
 export default function StatisticsIcon() {
 	return (
-		<svg viewBox='0 0 148 147' fill='none' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink'>
-			<rect className={styles.rect} x='0.222168' fill='url(#pattern4)' />
+		<svg
+			className={IconStyles.svg}
+			viewBox='0 0 148 147'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+			xmlnsXlink='http://www.w3.org/1999/xlink'>
+			<rect className={IconStyles.rect} x='0.222168' fill='url(#pattern4)' />
 			<defs>
 				<pattern id='pattern4' patternContentUnits='objectBoundingBox' width='1' height='1'>
 					<use xlinkHref='#image0_40_77' transform='scale(0.0111111)' />

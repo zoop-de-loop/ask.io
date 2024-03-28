@@ -10,14 +10,14 @@ export default function Home() {
 	return (
 		<>
 			<header className={styles.header}>
-				<AccountInfo src={"/lio_img.png"} fullName='Lio Giladi' day='9' className={styles.accountInfo} />
+				<AccountInfo src={"/lio_img.png"} fullName='Lio Giladi' day='9' />
 				<h1 className={styles.h1}>Ask.io</h1>
 			</header>
 			<main className={styles.main}>
-				<LinkCard name='Asks' icon={<AsksIcon />} className={styles.LinkCard} />
-				<LinkCard name='Statistics' icon={<StatisticsIcon />} className={styles.LinkCard} />
-				<LinkCard name='My Profile' icon={<MyProfileIcon />} className={styles.LinkCard} />
-				<LinkCard name='Settings' icon={<SettingsIcon />} className={styles.LinkCard} />
+				<LinkCard name='Asks' icon={<AsksIcon />} />
+				<LinkCard name='Statistics' icon={<StatisticsIcon />} />
+				<LinkCard name='My Profile' icon={<MyProfileIcon />} />
+				<LinkCard name='Settings' icon={<SettingsIcon />} />
 			</main>
 		</>
 	);

@@ -1,16 +1,16 @@
 import React from "react";
-import styles from "@/styles/Home.module.scss";
+import AccountInfoStyles from "@/styles/AccountInfo.module.scss";
 
 export default function AccountInfo(props) {
 	return (
-		<div className={props.className}>
-			<img src={props.src} className={styles.img} />
-			<div className={styles.div}>
-				<p className={styles.p}>{props.fullName}</p>
-				<p className={styles.p}>|</p>
-				<div className={styles.div}>
-					<p className={styles.p}>Day</p>
-					<p className={styles.date}>{props.day}</p>
+		<div className={AccountInfoStyles.accountInfo}>
+			<img src={props.src} className={AccountInfoStyles.img} />
+			<div className={AccountInfoStyles.div}>
+				<p className={AccountInfoStyles.p}>{props.fullName}</p>
+				<p className={AccountInfoStyles.p}>|</p>
+				<div className={AccountInfoStyles.div}>
+					<p className={AccountInfoStyles.p}>Day</p>
+					<p className={AccountInfoStyles.date}>{props.day}</p>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,38 @@
+.accountInfo {
+	margin-right: auto;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	gap: 1.25rem;
+	font-size: 1.75rem;
+	.div {
+		display: flex;
+		gap: 0.313rem;
+		.p {
+			display: block;
+		}
+		.date {
+			display: block;
+		}
+	}
+	.img {
+		height: 4rem;
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.accountInfo {
+		.div {
+			.p {
+				display: none;
+			}
+			.date {
+				display: block;
+			}
+		}
+	}
+}

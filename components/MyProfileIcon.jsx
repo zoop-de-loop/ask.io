@@ -1,10 +1,9 @@
 import React from "react";
-import styles from "@/styles/Home.module.scss";
-
+import IconStyles from "@/styles/Icons.module.scss";
 export default function MyProfileIcon() {
 	return (
-		<svg viewBox='0 0 124 124' fill='none'>
-			<rect className={styles.rect} fill='url(#pattern1)' />
+		<svg className={IconStyles.svg} viewBox='0 0 124 124' fill='none'>
+			<rect className={IconStyles.rect} fill='url(#pattern1)' />
 			<defs>
 				<pattern id='pattern1' patternContentUnits='objectBoundingBox' width='1' height='1'>
 					<use xlinkHref='#image0_40_78' transform='scale(0.01)' />
