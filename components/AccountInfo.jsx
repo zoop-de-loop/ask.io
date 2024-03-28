@@ -10,7 +10,10 @@ export default function AccountInfo(props) {
 				<p className={AccountInfoStyles.p}>|</p>
 				<div className={AccountInfoStyles.div}>
 					<p className={AccountInfoStyles.p}>Day</p>
-					<p className={AccountInfoStyles.date}>{props.day}</p>
+					<p className={AccountInfoStyles.date}>
+						{props.day}
+						<span className={AccountInfoStyles.span}>d</span>
+					</p>
 				</div>
 			</div>
 		</div>
