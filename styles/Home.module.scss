@@ -1,0 +1,140 @@
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	border-bottom: white 0.313rem solid;
+	padding: 2rem 0;
+
+	.accountInfo {
+		margin-right: auto;
+		width: fit-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		gap: 1.25rem;
+		font-size: 1.75rem;
+		.div {
+			display: flex;
+			gap: 0.313rem;
+			.p {
+				display: block;
+			}
+			.date {
+				display: block;
+			}
+		}
+		.img {
+			height: 4rem;
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+		}
+	}
+	.h1 {
+		position: absolute;
+		width: fit-content;
+		height: fit-content;
+		color: white;
+		font-size: 3rem;
+	}
+}
+.main {
+	height: 90%;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding-top: 2.5rem;
+	gap: 1.875rem;
+	.LinkCard {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25%;
+		height: 100%;
+		background-color: white;
+		border-radius: 0.313rem;
+
+		.h2 {
+			position: absolute;
+			top: 6.75%;
+			color: #ec7474;
+			font-size: 2.5rem;
+		}
+		.circleContainer {
+			top: -5%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			height: 50%;
+			width: 100%;
+
+			.bigCircle {
+				position: relative;
+				background-color: #ec7474;
+				height: 54%;
+				aspect-ratio: 1 /1;
+				border-radius: 50%;
+				.svg {
+					height: 60%;
+					aspect-ratio: 1 / 1;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+
+					.rect {
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+			.mediumCircle {
+				background-color: #ec7474;
+				height: 22%;
+				aspect-ratio: 1 / 1;
+				border-radius: 50%;
+			}
+			.smallCircle {
+				background-color: #ec7474;
+				aspect-ratio: 1 / 1;
+				height: 7.5%;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-height: 700px) {
+	.main {
+		.LinkCard {
+			.h2 {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.header {
+		height: 10vh;
+
+		.accountInfo {
+			.div {
+				.p {
+					display: none;
+				}
+				.date {
+					display: block;
+				}
+			}
+		}
+	}
+	.main {
+		height: 90vh;
+	}
+}
