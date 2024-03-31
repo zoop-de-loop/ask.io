@@ -1,6 +1,6 @@
 @use "colors";
 
-.Link-card {
+.link-card {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -12,6 +12,7 @@
 	padding-top: 2rem;
 	box-sizing: border-box;
 	text-decoration: none;
+
 	h2 {
 		font-weight: 400;
 		color: colors.$primary;
@@ -25,20 +26,24 @@
 		align-items: center;
 		width: 100%;
 		gap: 1rem;
+
 		.circle {
 			background-color: colors.$primary;
 			aspect-ratio: 1/1;
 			border-radius: 50%;
 		}
+
 		& .circle:nth-child(1) {
 			position: relative;
 			width: 60%;
 			max-width: 170px;
 		}
+
 		& .circle:nth-child(2) {
 			width: 25%;
 			max-width: 70px;
 		}
+
 		& .circle:nth-child(3) {
 			width: 10%;
 			max-width: 30px;
@@ -47,7 +52,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-	.Link-card {
+	.link-card {
 		flex-direction: row-reverse;
 		align-items: center;
 		justify-content: space-between;
@@ -61,10 +66,10 @@
 			font-size: 1.8rem;
 			text-align: center;
 		}
+
 		.circles {
 			margin-top: 0;
 			flex-direction: row;
-
 			height: 100%;
 			width: 50%;
 			gap: 12px;

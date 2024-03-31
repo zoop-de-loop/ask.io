@@ -2,7 +2,7 @@ import styles from "@/styles/link-card.module.scss";
 
 export default function LinkCard({ name, icon }) {
 	return (
-		<a className={styles["Link-card"]} href={`#${name}`}>
+		<a className={styles["link-card"]} href={`#${name}`}>
 			<h2>{name}</h2>
 
 			<div className={styles.circles}>
