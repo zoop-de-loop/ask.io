@@ -1,17 +1,17 @@
 import React from "react";
 import styles from "@/styles/AccountInfo.module.scss";
 
-export default function AccountInfo(props) {
+export default function AccountInfo({ profilePictureSrc, fullName, daysSinceReg }) {
 	return (
 		<div className={styles["account-info"]}>
-			<img src={props.profilePictureSrc} />
+			<img src={profilePictureSrc} />
 			<div>
-				<p>{props.fullName}</p>
+				<p>{fullName}</p>
 				<p>|</p>
 				<div>
 					<p>Day</p>
 					<p className={styles["days-since-reg"]}>
-						{props.daysSinceReg}
+						{daysSinceReg}
 						<span>d</span>
 					</p>
 				</div>
