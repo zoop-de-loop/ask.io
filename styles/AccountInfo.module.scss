@@ -1,4 +1,4 @@
-.accountInfo {
+.account-info {
 	margin-right: auto;
 	width: fit-content;
 	display: flex;
@@ -13,7 +13,7 @@
 		p {
 			display: block;
 		}
-		.daysSinceReg {
+		.days-since-reg {
 			display: block;
 			span {
 				display: none;
@@ -28,13 +28,13 @@
 }
 
 @media only screen and (max-width: 800px) {
-	.accountInfo {
+	.account-info {
 		gap: 0.2rem;
 		div {
 			p {
 				display: none;
 			}
-			.daysSinceReg {
+			.days-since-reg {
 				display: flex;
 				font-size: 1rem;
 				span {

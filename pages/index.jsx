@@ -1,7 +1,7 @@
-import AsksIcon from "@/components/AsksIcon";
-import StatisticsIcon from "@/components/StatisticsIcon";
-import MyProfileIcon from "@/components/MyProfileIcon";
-import SettingsIcon from "@/components/SettingsIcon";
+import AsksIcon from "@/Icons/AsksIcon";
+import StatisticsIcon from "@/Icons/StatisticsIcon";
+import MyProfileIcon from "@/Icons/MyProfileIcon";
+import SettingsIcon from "@/Icons/SettingsIcon";
 import LinkCard from "@/components/LinkCard";
 
 import PageHead from "@/components/PageHead";

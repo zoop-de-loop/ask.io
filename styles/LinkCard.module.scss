@@ -1,4 +1,4 @@
-.LinkCard {
+.Link-card {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -14,7 +14,7 @@
 		color: #ec7474;
 		font-size: 2.5rem;
 	}
-	.circleContainer {
+	.circle-container {
 		top: -5%;
 		position: relative;
 		display: flex;
@@ -24,20 +24,20 @@
 		height: 50%;
 		width: 100%;
 
-		.bigCircle {
+		.big-circle {
 			position: relative;
 			background-color: #ec7474;
 			height: 54%;
 			aspect-ratio: 1 /1;
 			border-radius: 50%;
 		}
-		.mediumCircle {
+		.medium-circle {
 			background-color: #ec7474;
 			height: 22%;
 			aspect-ratio: 1 / 1;
 			border-radius: 50%;
 		}
-		.smallCircle {
+		.small-circle {
 			background-color: #ec7474;
 			aspect-ratio: 1 / 1;
 			height: 7.5%;
@@ -47,7 +47,7 @@
 }
 @media only screen and ((max-height: 700px) or (max-width: 900px)) {
 	/* making sure linkcard headers dont overlap */
-	.LinkCard {
+	.Link-card {
 		h2 {
 			font-size: 1.75rem;
 		}
@@ -55,7 +55,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-	.LinkCard {
+	.Link-card {
 		justify-content: flex-start;
 		width: 100%;
 		height: 15%;
@@ -64,7 +64,7 @@
 			right: 5%;
 		}
 		flex-direction: row;
-		.circleContainer {
+		.circle-container {
 			top: 0;
 
 			flex-direction: row;
@@ -72,13 +72,13 @@
 
 			height: 100%;
 			width: 50%;
-			.bigCircle {
+			.big-circle {
 				height: 70%;
 			}
-			.mediumCircle {
+			.medium-circle {
 				height: 38%;
 			}
-			.smallCircle {
+			.small-circle {
 				height: 20%;
 			}
 		}
