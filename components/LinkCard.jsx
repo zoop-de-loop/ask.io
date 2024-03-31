@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/LinkCard.module.scss";
 
 export default function LinkCard({ name, icon }) {

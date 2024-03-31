@@ -1,4 +1,3 @@
-import React from "react";
 import AccountInfo from "@/components/AccountInfo";
 import styles from "@/styles/PageHead.module.scss";
 export default function PageHead() {

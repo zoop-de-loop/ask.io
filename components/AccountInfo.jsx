@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/AccountInfo.module.scss";
 
 export default function AccountInfo({ profilePictureSrc, fullName, daysSinceReg }) {
