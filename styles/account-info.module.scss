@@ -1,6 +1,6 @@
 @use "colors";
 
-.account-info {
+#account-info {
 	margin-right: auto;
 	width: fit-content;
 	display: flex;
@@ -8,19 +8,18 @@
 	color: colors.$secondary;
 	gap: 1.25rem;
 	font-size: min(2vw, 1.75rem);
-	div {
+	.row {
 		display: flex;
 		gap: 0.313rem;
-		p {
-			display: block;
-		}
-		.days-since-reg {
-			display: block;
-			span {
-				display: none;
-			}
+	}
+
+	#days-since-registration {
+		display: block;
+		span {
+			display: none;
 		}
 	}
+
 	img {
 		width: 3em;
 		aspect-ratio: 1 / 1;
@@ -29,20 +28,23 @@
 }
 
 @media only screen and (max-width: 800px) {
-	.account-info {
+	#account-info {
 		gap: 0.75rem;
-		div {
+		.row {
 			p {
 				display: none;
 			}
-			.days-since-reg {
-				display: flex;
-				font-size: 1rem;
-				span {
-					display: block;
-				}
+		}
+
+		#days-since-registration {
+			display: flex;
+			font-size: 1rem;
+
+			span {
+				display: block;
 			}
 		}
+
 		img {
 			width: 2.5rem;
 			aspect-ratio: 1 / 1;

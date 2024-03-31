@@ -2,14 +2,14 @@ import styles from "@/styles/account-info.module.scss";
 
 export default function AccountInfo({ profilePictureSrc, fullName, daysSinceReg }) {
 	return (
-		<div className={styles["account-info"]}>
+		<div id={styles["account-info"]}>
 			<img src={profilePictureSrc} />
-			<div>
+			<div className={styles.row}>
 				<p>{fullName}</p>
 				<p>|</p>
-				<div>
+				<div className={styles.row}>
 					<p>Day</p>
-					<p className={styles["days-since-reg"]}>
+					<p id={styles["days-since-registration"]}>
 						{daysSinceReg}
 						<span>d</span>
 					</p>
