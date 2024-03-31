@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/Icons.module.scss";
 export default function AsksIcon() {
 	return (
