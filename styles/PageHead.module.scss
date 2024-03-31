@@ -1,0 +1,26 @@
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	border-bottom: white 0.313rem solid;
+	padding: 2rem 0;
+	h1 {
+		position: absolute;
+		width: fit-content;
+		height: fit-content;
+		color: white;
+		font-size: 3rem;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.header {
+		padding: 0.75rem 1.5rem;
+		border-bottom-width: 0.2rem;
+
+		h1 {
+			font-size: 1.5rem;
+		}
+	}
+}
