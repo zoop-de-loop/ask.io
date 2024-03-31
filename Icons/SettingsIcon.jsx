@@ -1,12 +1,6 @@
-import styles from "@/styles/Icons.module.scss";
 export default function SettingsIcon() {
 	return (
-		<svg
-			className={styles.svg}
-			viewBox='0 0 131 125'
-			fill='none'
-			xmlns='http://www.w3.org/2000/svg'
-			xmlnsXlink='http://www.w3.org/1999/xlink'>
+		<svg viewBox='0 0 131 125' fill='none' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink'>
 			<rect x='0.916504' fill='url(#pattern3)' />
 			<defs>
 				<pattern id='pattern3' patternContentUnits='objectBoundingBox' width='1' height='1'>

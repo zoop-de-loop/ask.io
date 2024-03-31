@@ -6,6 +6,19 @@
 	box-sizing: border-box;
 	padding-top: 2.5rem;
 	gap: 1.875rem;
+	svg {
+		height: 60%;
+		aspect-ratio: 1 / 1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		rect {
+			height: 100%;
+			width: 100%;
+		}
+	}
 }
 
 @media only screen and (max-width: 800px) {
