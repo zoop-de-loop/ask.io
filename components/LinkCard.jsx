@@ -7,9 +7,9 @@ export default function LinkCard(props) {
 			<h2>{props.name}</h2>
 
 			<div className={styles.circles}>
-				<div className={styles["big-circle"]}>{props.icon}</div>
-				<div className={styles["medium-circle"]}></div>
-				<div className={styles["small-circle"]}></div>
+				<div className={styles.circle}>{props.icon}</div>
+				<div className={styles.circle} />
+				<div className={styles.circle} />
 			</div>
 		</a>
 	);

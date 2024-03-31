@@ -25,24 +25,20 @@
 		height: 50%;
 		width: 100%;
 
-		.big-circle {
-			position: relative;
+		.circle {
 			background-color: #ec7474;
-			height: 54%;
 			aspect-ratio: 1 /1;
 			border-radius: 50%;
 		}
-		.medium-circle {
-			background-color: #ec7474;
-			height: 22%;
-			aspect-ratio: 1 / 1;
-			border-radius: 50%;
+		& .circle:nth-child(1) {
+			position: relative;
+			height: 54%;
 		}
-		.small-circle {
-			background-color: #ec7474;
-			aspect-ratio: 1 / 1;
+		& .circle:nth-child(2) {
+			height: 22%;
+		}
+		& .circle:nth-child(3) {
 			height: 7.5%;
-			border-radius: 50%;
 		}
 	}
 }
@@ -71,13 +67,14 @@
 			justify-content: space-evenly;
 			height: 100%;
 			width: 50%;
-			.big-circle {
+
+			& .circle:nth-child(1) {
 				height: 70%;
 			}
-			.medium-circle {
+			& .circle:nth-child(2) {
 				height: 38%;
 			}
-			.small-circle {
+			& .circle:nth-child(3) {
 				height: 20%;
 			}
 		}
