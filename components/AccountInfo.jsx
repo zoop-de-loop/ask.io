@@ -10,7 +10,7 @@ export default function AccountInfo(props) {
 				<p>|</p>
 				<div>
 					<p>Day</p>
-					<p className={styles.date}>
+					<p className={styles.daysSinceReg}>
 						{props.daysSinceReg}
 						<span>d</span>
 					</p>
