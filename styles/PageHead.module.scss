@@ -1,17 +1,19 @@
+@use "colors";
+
 .header {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
-	border-bottom: white 0.313rem solid;
+	border-bottom: colors.$secondary 0.313rem solid;
 	padding: 2rem 0;
 
 	h1 {
 		font-weight: 500;
 		position: absolute;
-		color: white;
-		font-size: 3rem;
+		color: colors.$secondary;
+		font-size: min(4vw, 3rem);
 	}
 }
 @media only screen and (max-width: 800px) {
