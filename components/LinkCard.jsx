@@ -1,17 +1,17 @@
 import React from "react";
-import LinkCardStyles from "@/styles/LinkCard.module.scss";
+import styles from "@/styles/LinkCard.module.scss";
 
 export default function LinkCard(props) {
 	return (
-		<a className={LinkCardStyles.LinkCard} href={`#${props.name}`}>
+		<a className={styles.LinkCard} href={`#${props.name}`}>
 			<h2>{props.name}</h2>
 
-			<div className={LinkCardStyles.circleContainer}>
-				<div className={LinkCardStyles.bigCircle}>
+			<div className={styles.circleContainer}>
+				<div className={styles.bigCircle}>
 					<div>{props.icon}</div>
 				</div>
-				<div className={LinkCardStyles.mediumCircle}></div>
-				<div className={LinkCardStyles.smallCircle}></div>
+				<div className={styles.mediumCircle}></div>
+				<div className={styles.smallCircle}></div>
 			</div>
 		</a>
 	);

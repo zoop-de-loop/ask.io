@@ -1,9 +1,9 @@
 import React from "react";
-import IconStyles from "@/styles/Icons.module.scss";
+import styles from "@/styles/Icons.module.scss";
 export default function AsksIcon() {
 	return (
 		<svg
-			className={IconStyles.svg}
+			className={styles.svg}
 			viewBox='0 0 125 125'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
