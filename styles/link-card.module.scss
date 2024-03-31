@@ -30,22 +30,22 @@
 			background-color: colors.$primary;
 			aspect-ratio: 1/1;
 			border-radius: 50%;
-		}
 
-		& .circle:nth-child(1) {
-			position: relative;
-			width: 60%;
-			max-width: 170px;
-		}
+			&:nth-child(1) {
+				position: relative;
+				width: 60%;
+				max-width: 170px;
+			}
 
-		& .circle:nth-child(2) {
-			width: 25%;
-			max-width: 70px;
-		}
+			&:nth-child(2) {
+				width: 25%;
+				max-width: 70px;
+			}
 
-		& .circle:nth-child(3) {
-			width: 10%;
-			max-width: 30px;
+			&:nth-child(3) {
+				width: 10%;
+				max-width: 30px;
+			}
 		}
 	}
 }
@@ -73,14 +73,18 @@
 			width: 50%;
 			gap: 12px;
 
-			& .circle:nth-child(1) {
-				width: 60px;
-			}
-			& .circle:nth-child(2) {
-				width: 35px;
-			}
-			& .circle:nth-child(3) {
-				width: 18px;
+			.circle {
+				&:nth-child(1) {
+					width: 60px;
+				}
+
+				&:nth-child(2) {
+					width: 35px;
+				}
+
+				&:nth-child(3) {
+					width: 18px;
+				}
 			}
 		}
 	}
