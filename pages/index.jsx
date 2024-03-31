@@ -3,13 +3,13 @@ import StatisticsIcon from "@/Icons/StatisticsIcon";
 import MyProfileIcon from "@/Icons/MyProfileIcon";
 import SettingsIcon from "@/Icons/SettingsIcon";
 import LinkCard from "@/components/LinkCard";
-import PageHead from "@/components/PageHead";
-import styles from "@/styles/Home.module.scss";
+import Header from "@/components/Header";
+import styles from "@/styles/home.module.scss";
 
 export default function Home() {
 	return (
 		<>
-			<PageHead />
+			<Header />
 			<main className={styles.main}>
 				<LinkCard name='Asks' icon={<AsksIcon />} />
 				<LinkCard name='Statistics' icon={<StatisticsIcon />} />

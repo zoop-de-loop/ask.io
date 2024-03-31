@@ -1,4 +1,4 @@
-import styles from "@/styles/LinkCard.module.scss";
+import styles from "@/styles/link-card.module.scss";
 
 export default function LinkCard({ name, icon }) {
 	return (
