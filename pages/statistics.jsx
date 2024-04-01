@@ -1,9 +1,10 @@
-import Header from "@/components/Header";
+import PagesHeader from "@/components/PagesHeader";
+import Header from "@/components/PagesHeader";
 
 export default function Statistics() {
 	return (
 		<>
-			<Header />
+			<PagesHeader />
 			<main className={styles.main}></main>
 		</>
 	);
