@@ -11,10 +11,10 @@ export default function Home() {
 		<>
 			<Header />
 			<main className={styles.main}>
-				<LinkCard name='Asks' url='Asks' icon={<AsksIcon />} />
-				<LinkCard name='Statistics' link='Statistics' icon={<StatisticsIcon />} />
-				<LinkCard name='My Profile' link='myProfile' icon={<MyProfileIcon />} />
-				<LinkCard name='Settings' link='Settings' icon={<SettingsIcon />} />
+				<LinkCard name='Asks' url='/ask' icon={<AsksIcon />} />
+				<LinkCard name='Statistics' url='/statistics' icon={<StatisticsIcon />} />
+				<LinkCard name='My Profile' url='/myProfile' icon={<MyProfileIcon />} />
+				<LinkCard name='Settings' url='/settings' icon={<SettingsIcon />} />
 			</main>
 		</>
 	);
