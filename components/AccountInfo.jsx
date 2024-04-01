@@ -1,4 +1,4 @@
-import styles from "@/styles/account-info.module.scss";
+import styles from "@/styles/components/account-info.module.scss";
 
 export default function AccountInfo({ profilePictureSrc, fullName, daysSinceRegistration }) {
 	return (

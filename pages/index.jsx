@@ -4,7 +4,7 @@ import MyProfileIcon from "@/components/Icons/MyProfileIcon";
 import SettingsIcon from "@/components/Icons/SettingsIcon";
 import LinkCard from "@/components/LinkCard";
 import Header from "@/components/Header";
-import styles from "@/styles/home.module.scss";
+import styles from "@/styles/pages/home.module.scss";
 
 export default function Home() {
 	return (
