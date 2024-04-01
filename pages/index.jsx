@@ -11,7 +11,7 @@ export default function Home() {
 		<>
 			<Header />
 			<main className={styles.main}>
-				<LinkCard name='Asks' link='Asks' icon={<AsksIcon />} />
+				<LinkCard name='Asks' url='Asks' icon={<AsksIcon />} />
 				<LinkCard name='Statistics' link='Statistics' icon={<StatisticsIcon />} />
 				<LinkCard name='My Profile' link='myProfile' icon={<MyProfileIcon />} />
 				<LinkCard name='Settings' link='Settings' icon={<SettingsIcon />} />
