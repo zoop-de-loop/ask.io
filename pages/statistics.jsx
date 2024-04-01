@@ -4,7 +4,7 @@ export default function Statistics() {
 	return (
 		<>
 			<PagesHeader />
-			<main className={styles.main}></main>
+			<main></main>
 		</>
 	);
 }
