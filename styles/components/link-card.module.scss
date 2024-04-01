@@ -1,0 +1,91 @@
+@use "/styles/colors";
+
+.link-card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 25%;
+	height: 100%;
+	background-color: colors.$secondary;
+	border-radius: 0.313rem;
+	padding-top: 2rem;
+	box-sizing: border-box;
+	text-decoration: none;
+
+	h2 {
+		font-weight: 400;
+		color: colors.$primary;
+		font-size: min(2.5vw, 35px);
+	}
+
+	.circles {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		gap: 1rem;
+
+		.circle {
+			background-color: colors.$primary;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+
+			&:nth-child(1) {
+				position: relative;
+				width: 60%;
+				max-width: 170px;
+			}
+
+			&:nth-child(2) {
+				width: 25%;
+				max-width: 70px;
+			}
+
+			&:nth-child(3) {
+				width: 10%;
+				max-width: 30px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.link-card {
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: space-between;
+		padding-inline: min(5%, 2rem);
+		width: 100%;
+		height: fit-content;
+		padding-block: 10px;
+		box-sizing: border-box;
+
+		h2 {
+			font-size: 1.8rem;
+			text-align: center;
+		}
+
+		.circles {
+			margin-top: 0;
+			flex-direction: row;
+			height: 100%;
+			width: 50%;
+			gap: 12px;
+
+			.circle {
+				&:nth-child(1) {
+					width: 60px;
+				}
+
+				&:nth-child(2) {
+					width: 35px;
+				}
+
+				&:nth-child(3) {
+					width: 18px;
+				}
+			}
+		}
+	}
+}
