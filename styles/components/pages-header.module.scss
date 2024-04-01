@@ -17,8 +17,9 @@
 
 	a {
 		text-decoration: underline;
+		text-decoration-thickness: min(0.2vw, 0.075rem);
 		color: colors.$secondary;
-		font-size: min(1.5vw, 1.5rem);
+		font-size: min(2vw, 1.5rem);
 	}
 }
 
@@ -33,6 +34,7 @@
 
 		a {
 			font-size: 1rem;
+			text-decoration-thickness: 0.075rem;
 		}
 	}
 }
