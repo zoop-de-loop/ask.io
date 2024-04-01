@@ -3,7 +3,7 @@ import styles from "@/styles/components/account-info.module.scss";
 export default function AccountInfo({ profilePictureSrc, fullName, daysSinceRegistration }) {
 	return (
 		<div id={styles["account-info"]}>
-			<img src={profilePictureSrc} />
+			<img src={profilePictureSrc} alt='profile-pic' />
 			<div className={styles.row}>
 				<p>{fullName}</p>
 				<p>|</p>
