@@ -1,6 +1,6 @@
 import styles from "@/styles/account-info.module.scss";
 
-export default function AccountInfo({ profilePictureSrc, fullName, daysSinceReg }) {
+export default function AccountInfo({ profilePictureSrc, fullName, daysSinceRegistration }) {
 	return (
 		<div id={styles["account-info"]}>
 			<img src={profilePictureSrc} />
@@ -10,7 +10,7 @@ export default function AccountInfo({ profilePictureSrc, fullName, daysSinceReg 
 				<div className={styles.row}>
 					<p>Day</p>
 					<p id={styles["days-since-registration"]}>
-						{daysSinceReg}
+						{daysSinceRegistration}
 						<span>d</span>
 					</p>
 				</div>
