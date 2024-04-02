@@ -3,9 +3,9 @@
 .article {
 	background-color: colors.$secondary;
 	width: 17%;
+	height: fit-content;
 	aspect-ratio: 1/1;
 	border-radius: 0.75rem;
-	margin-block: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
