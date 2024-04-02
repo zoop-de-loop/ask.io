@@ -16,11 +16,8 @@ export default function Statistics() {
 	const stats = data.map(({ amount, name }) => <Stat amount={amount} name={name} />);
 
 	return (
-		<>
-			<Header />
-			<main>
-				<div className={styles.stats}>{stats}</div>
-			</main>
-		</>
+		<main>
+			<div className={styles.stats}>{stats}</div>
+		</main>
 	);
 }
