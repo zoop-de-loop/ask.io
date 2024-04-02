@@ -1,18 +1,25 @@
 import Header from "@/components/Header";
-import Statistic from "@/components/Stat";
+import Stat from "@/components/Stat";
 import styles from "@/styles/pages/statistics.module.scss";
 
 export default function Statistics() {
+	const data = [
+		{ amount: 19, name: "all asks" },
+		{ amount: 7, name: "my asks" },
+		{ amount: 3, name: "liked asks" },
+		{ amount: 3, name: "accounts" },
+		{ amount: 1, name: "accounts" },
+		{ amount: 1, name: "accounts" },
+		{ amount: 1, name: "accounts" },
+	];
+
 	return (
 		<>
 			<Header />
 			<main className={styles.main}>
-				<Statistic amount={19} name='all asks' />
-				<Statistic amount={7} name='my asks' />
-				<Statistic amount={3} name='liked asks' />
-				<Statistic amount={1} name='accounts' />
-				<Statistic amount={1} name='accounts' />
-				<Statistic amount={1} name='accounts' />
+				{data.map(({ amount, name }) => (
+					<Stat amount={amount} name={name} />
+				))}
 			</main>
 		</>
 	);
