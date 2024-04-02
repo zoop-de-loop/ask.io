@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Statistic from "@/components/Stat";
 import styles from "@/styles/pages/statistics.module.scss";
+
 export default function Statistics() {
 	return (
 		<>
