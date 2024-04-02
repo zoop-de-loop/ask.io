@@ -1,6 +1,7 @@
 @use "/styles/colors";
 
 .article {
+	flex-grow: 1;
 	background-color: colors.$secondary;
 	width: 17%;
 	height: fit-content;
@@ -28,15 +29,15 @@
 
 @media only screen and (max-width: 800px) {
 	.article {
-		width: 46%;
+		width: 40%;
 		border-radius: 0.75rem;
 		p {
 			&:nth-child(1) {
-				font-size: 4rem;
+				font-size: 3.55rem;
 			}
 
 			&:nth-child(2) {
-				font-size: 2rem;
+				font-size: 1.5rem;
 			}
 		}
 	}
