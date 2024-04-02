@@ -10,6 +10,8 @@ export default function Statistics() {
 				<Statistic amount={7} statisticName='my asks' />
 				<Statistic amount={3} statisticName='liked asks' />
 				<Statistic amount={1} statisticName='accounts' />
+				<Statistic amount={1} statisticName='accounts' />
+				<Statistic amount={1} statisticName='accounts' />
 			</main>
 		</>
 	);
