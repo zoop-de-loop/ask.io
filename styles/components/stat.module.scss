@@ -26,16 +26,16 @@
 
 @media only screen and (max-width: 800px) {
 	.stat {
-		width: 40%;
-		flex-grow: 1;
-		border-radius: 0.75rem;
+		width: 45%;
+		border-radius: 7%;
+		padding: 1vw;
 
 		p {
-			font-size: 3.55rem;
+			font-size: 15vw;
 		}
 
 		h2 {
-			font-size: 1.5rem;
+			font-size: 5vw;
 		}
 	}
 }
