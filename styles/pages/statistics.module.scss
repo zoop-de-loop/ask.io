@@ -7,3 +7,11 @@
 	column-gap: 4vw;
 	row-gap: 3.5vw;
 }
+
+@media only screen and (max-width: 800px) {
+	.main {
+		padding: 2rem;
+		justify-content: space-between;
+		column-gap: 2rem;
+	}
+}
