@@ -13,15 +13,13 @@ export default function Statistics() {
 		{ amount: 1, name: "accounts" },
 	];
 
+	const stats = data.map(({ amount, name }) => <Stat amount={amount} name={name} />);
+
 	return (
 		<>
 			<Header />
 			<main>
-				<div className={styles.stats}>
-					{data.map(({ amount, name }) => (
-						<Stat amount={amount} name={name} />
-					))}
-				</div>
+				<div className={styles.stats}>{stats}</div>
 			</main>
 		</>
 	);
