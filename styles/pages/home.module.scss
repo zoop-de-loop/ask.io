@@ -1,6 +1,6 @@
-.main {
-	flex-grow: 1;
-	height: 90%;
+.cards {
+	width: 100%;
+	height: 100%;
 	display: flex;
 	box-sizing: border-box;
 	padding-top: 2.5rem;
@@ -22,7 +22,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-	.main {
+	.cards {
 		padding: 1.2rem;
 		flex-direction: column;
 		gap: 1.2rem;

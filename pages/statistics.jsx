@@ -16,10 +16,12 @@ export default function Statistics() {
 	return (
 		<>
 			<Header />
-			<main className={styles.main}>
-				{data.map(({ amount, name }) => (
-					<Stat amount={amount} name={name} />
-				))}
+			<main>
+				<div className={styles.stats}>
+					{data.map(({ amount, name }) => (
+						<Stat amount={amount} name={name} />
+					))}
+				</div>
 			</main>
 		</>
 	);
