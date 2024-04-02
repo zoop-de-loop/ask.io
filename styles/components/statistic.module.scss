@@ -1,0 +1,27 @@
+@use "/styles/colors";
+
+.article {
+	background-color: colors.$secondary;
+	width: 17%;
+	aspect-ratio: 1/1;
+	border-radius: 0.75rem;
+	margin-block: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	box-sizing: border-box;
+
+	p {
+		&:nth-child(1) {
+			font-size: 7rem;
+			font-weight: 500;
+		}
+
+		&:nth-child(2) {
+			font-size: 3rem;
+			font-weight: 400;
+		}
+	}
+}
