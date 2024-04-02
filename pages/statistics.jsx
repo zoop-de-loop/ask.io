@@ -1,10 +1,10 @@
-import PagesHeader from "@/components/PagesHeader";
+import Header from "@/components/Header";
 import Statistic from "@/components/statistic";
 import styles from "@/styles/pages/statistics.module.scss";
 export default function Statistics() {
 	return (
 		<>
-			<PagesHeader />
+			<Header />
 			<main className={styles.main}>
 				<Statistic amount={19} statisticName='all asks' />
 				<Statistic amount={7} statisticName='my asks' />
