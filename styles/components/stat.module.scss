@@ -1,6 +1,6 @@
 @use "/styles/colors";
 
-.article {
+.stat {
 	background-color: colors.$secondary;
 	width: 17%;
 	height: fit-content;
@@ -27,7 +27,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-	.article {
+	.stat {
 		width: 40%;
 		flex-grow: 1;
 		border-radius: 0.75rem;
