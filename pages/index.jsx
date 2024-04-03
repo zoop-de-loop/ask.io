@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<div className={styles["page-links"]}>
-				<LinkCard name='Asks' url='/ask' icon={<AsksIcon />} />
+				<LinkCard name='Asks' url='/asks' icon={<AsksIcon />} />
 				<LinkCard name='Statistics' url='/statistics' icon={<StatisticsIcon />} />
 				<LinkCard name='My Profile' url='/myProfile' icon={<MyProfileIcon />} />
 				<LinkCard name='Settings' url='/settings' icon={<SettingsIcon />} />
