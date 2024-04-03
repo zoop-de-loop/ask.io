@@ -2,14 +2,24 @@
 
 .asks-and-buttons {
 	height: 100%;
-	padding-block: 2rem;
+	box-sizing: border-box;
+	padding-top: 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 2rem;
 
 	.asks {
+		height: 0;
 		flex-grow: 1;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
 		overflow: auto;
+		gap: 2rem;
+		box-sizing: border-box;
+		padding-top: 0.75rem;
+		padding-left: 0.75rem;
 	}
 
 	.buttons {
