@@ -1,0 +1,38 @@
+@use "/styles/colors";
+
+.asks-and-buttons {
+	padding-block: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.asks {
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+
+		button {
+			padding: 1rem;
+			min-width: 12rem;
+			box-sizing: border-box;
+			border-radius: 0.5rem;
+			border: solid 0.2rem colors.$secondary;
+			font-size: 1.5rem;
+			font-weight: 600;
+
+			&:nth-child(1) {
+				color: colors.$secondary;
+				background-color: colors.$primary;
+			}
+
+			&:nth-child(2) {
+				color: colors.$primary;
+				background-color: colors.$secondary;
+			}
+		}
+	}
+}
