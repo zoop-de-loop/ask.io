@@ -1,11 +1,18 @@
 import styles from "@/styles/components/ask.module.scss";
+import React, { useState } from "react";
 
 export default function Ask({ ask, like, anonymous }) {
+	const [isLiked, setIsLike] = useState(like);
+
+	const handleClicked = () => {
+		setIsLike((prev) => !prev);
+	};
+
 	return (
 		<article className={styles.ask}>
 			<h2>{ask}</h2>
 			<img src='/blob.png' alt='blob' />
-			<img src={like ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
+			<img onClick={handleClicked} src={isLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
 			{anonymous && <img src='/lio_img.png' />}
 		</article>
 	);
