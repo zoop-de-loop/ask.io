@@ -3,13 +3,13 @@ import Stat from "@/components/Stat";
 import styles from "@/styles/pages/statistics.module.scss";
 
 const data = [
-	{ amount: 19, name: "all asks" },
-	{ amount: 7, name: "my asks" },
-	{ amount: 3, name: "liked asks" },
-	{ amount: 3, name: "accounts" },
-	{ amount: 1, name: "accounts" },
-	{ amount: 1, name: "accounts" },
-	{ amount: 1, name: "accounts" },
+	{ id: 0, amount: 19, name: "all asks" },
+	{ id: 1, amount: 7, name: "my asks" },
+	{ id: 2, amount: 3, name: "liked asks" },
+	{ id: 3, amount: 3, name: "accounts" },
+	{ id: 4, amount: 1, name: "accounts" },
+	{ id: 5, amount: 1, name: "accounts" },
+	{ id: 6, amount: 1, name: "accounts" },
 ];
 
 export default function Statistics() {
