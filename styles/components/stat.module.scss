@@ -1,0 +1,40 @@
+@use "/styles/colors";
+
+.stat {
+	background-color: colors.$secondary;
+	width: 17rem;
+	aspect-ratio: 1/1;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	box-sizing: border-box;
+
+	p {
+		font-size: 7rem;
+		font-weight: 500;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 400;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.stat {
+		width: 45%;
+		border-radius: 7%;
+		padding: 1vw;
+
+		p {
+			font-size: 15vw;
+		}
+
+		h2 {
+			font-size: 5vw;
+		}
+	}
+}
