@@ -5,8 +5,7 @@ import { useRouter } from "next/router";
 
 export default function Header() {
 	const router = useRouter();
-	const homeLink =
-		router.asPath === "/" ? undefined : <a href='/'>HOME</a>; /* if homepage homeLink will be undefined so it wont be rendered */
+	const homeLink = router.asPath === "/" ? undefined : <a href='/'>HOME</a>;
 
 	return (
 		<header id={styles.header}>
