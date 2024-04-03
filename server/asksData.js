@@ -13,6 +13,18 @@ const asksData = [
 	{ id: 11, ask: "Can a dog love me?", like: false, anonymous: true },
 	{ id: 12, ask: "Can a dog love me?", like: false, anonymous: true },
 	{ id: 13, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 14, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 15, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 16, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 17, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 18, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 19, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 20, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 21, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 22, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 23, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 24, ask: "Can a dog love me?", like: false, anonymous: true },
+	{ id: 25, ask: "Can a dog love me?", like: false, anonymous: true },
 ];
 
 export default asksData;
