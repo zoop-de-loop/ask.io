@@ -13,7 +13,7 @@ export default function Ask({ id, ask, like, anonymous }) {
 			<h2>{ask}</h2>
 			<img src='/blob.png' alt='blob' />
 			<img onClick={handleClicked} src={isLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
-			{anonymous && <img src='/lio_img.png' />}
+			{!anonymous && <img src='/lio_img.png' />}
 		</article>
 	);
 }
