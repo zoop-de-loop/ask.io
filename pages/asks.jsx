@@ -3,10 +3,10 @@ import Ask from "@/components/Ask";
 import asksData from "@/server/asksData";
 
 export default function Asks() {
-	const showAsk = asksData.map(({ ask, like, anonymous }) => {
-		return <Ask ask={ask} like={like} anonymous={anonymous} />;
+	const askDataArr = Object.entries(asksData);
+	const showAsk = askDataArr.map((dataArr) => {
+		return <Ask id={dataArr[0]} ask={dataArr[1]["ask"]} like={dataArr[1]["like"]} anonymous={dataArr[1]["anonymous"]} />;
 	});
-	console.log(showAsk);
 
 	return (
 		<main>

@@ -1,7 +1,7 @@
 import styles from "@/styles/components/ask.module.scss";
 import React, { useState } from "react";
 
-export default function Ask({ ask, like, anonymous }) {
+export default function Ask({ id, ask, like, anonymous }) {
 	const [isLiked, setIsLike] = useState(like);
 
 	const handleClicked = () => {
