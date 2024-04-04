@@ -1,11 +1,15 @@
 import styles from "@/styles/components/ask.module.scss";
 import React, { useState } from "react";
+import asksData from "@/server/asksData";
 
-export default function Ask({ key, ask, like, anonymous }) {
+export default function Ask({ id, ask, like, anonymous }) {
 	const [isLiked, setIsLike] = useState(like);
 
 	const handleClicked = () => {
-		setIsLike((prev) => !prev);
+		setIsLike((prev) => {
+			asksData[id]["like"] = !prev;
+			return !prev;
+		});
 	};
 
 	return (
@@ -14,7 +18,7 @@ export default function Ask({ key, ask, like, anonymous }) {
 			<img src='/blob.png' alt='blob' />
 			<img onClick={handleClicked} src={isLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
 			{!anonymous && (
-				<a href={`/account/${key}`}>
+				<a href={`/account/${id}`}>
 					<img src='/lio_img.png' />
 				</a>
 			)}

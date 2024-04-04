@@ -18,12 +18,28 @@ export default function Asks() {
 		const likedAsks = askDataArr.filter((dataArr) => dataArr[1]["like"] === true);
 		console.log(likedAsks);
 		showAsk = likedAsks.map((dataArr) => {
-			console.log(`==> ask: ${dataArr[1]["ask"]} like: ${dataArr[1]["like"]} anonymous: ${dataArr[1]["anonymous"]}`);
-			return <Ask key={dataArr[0]} ask={dataArr[1]["ask"]} like={dataArr[1]["like"]} anonymous={dataArr[1]["anonymous"]} />;
+			console.log(`==> ask: ${dataArr[0]}`);
+			return (
+				<Ask
+					key={dataArr[0]}
+					id={dataArr[0]}
+					ask={dataArr[1]["ask"]}
+					like={dataArr[1]["like"]}
+					anonymous={dataArr[1]["anonymous"]}
+				/>
+			);
 		});
 	} else {
 		showAsk = askDataArr.map((dataArr) => {
-			return <Ask key={dataArr[0]} ask={dataArr[1]["ask"]} like={dataArr[1]["like"]} anonymous={dataArr[1]["anonymous"]} />;
+			return (
+				<Ask
+					key={dataArr[0]}
+					id={dataArr[0]}
+					ask={dataArr[1]["ask"]}
+					like={dataArr[1]["like"]}
+					anonymous={dataArr[1]["anonymous"]}
+				/>
+			);
 		});
 	}
 
