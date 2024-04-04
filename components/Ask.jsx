@@ -1,7 +1,7 @@
 import styles from "@/styles/components/ask.module.scss";
 import React, { useState } from "react";
 
-export default function Ask({ id, ask, like, anonymous }) {
+export default function Ask({ key, ask, like, anonymous }) {
 	const [isLiked, setIsLike] = useState(like);
 
 	const handleClicked = () => {
@@ -13,7 +13,11 @@ export default function Ask({ id, ask, like, anonymous }) {
 			<h2>{ask}</h2>
 			<img src='/blob.png' alt='blob' />
 			<img onClick={handleClicked} src={isLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
-			{!anonymous && <img src='/lio_img.png' />}
+			{!anonymous && (
+				<a href={`/account/${key}`}>
+					<img src='/lio_img.png' />
+				</a>
+			)}
 		</article>
 	);
 }
