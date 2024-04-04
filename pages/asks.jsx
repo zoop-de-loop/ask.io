@@ -1,11 +1,19 @@
 import styles from "@/styles/pages/asks.module.scss";
 import Ask from "@/components/Ask";
 import asksData from "@/server/asksData";
+import AskForm from "@/components/AskForm";
 import React, { useState } from "react";
 
 export default function Asks() {
 	const askDataArr = Object.entries(asksData);
 	const [likedActive, setLikedActive] = useState(false);
+	const [askFormActive, setAskFormActive] = useState(false);
+
+	const handleAskClick = () => {
+		setAskFormActive((prev) => {
+			return !prev;
+		});
+	};
 
 	const handleLikeButtonClick = () => {
 		setLikedActive((prev) => {
@@ -16,9 +24,7 @@ export default function Asks() {
 
 	if (likedActive) {
 		const likedAsks = askDataArr.filter((dataArr) => dataArr[1]["like"] === true);
-		console.log(likedAsks);
 		showAsk = likedAsks.map((dataArr) => {
-			console.log(`==> ask: ${dataArr[0]}`);
 			return (
 				<Ask
 					key={dataArr[0]}
@@ -49,9 +55,10 @@ export default function Asks() {
 				<div className={styles.asks}>{showAsk}</div>
 				<div className={styles.buttons}>
 					<button onClick={handleLikeButtonClick}>{likedActive ? "Show All Asks" : "Show liked Asks"}</button>
-					<button>Ask</button>
+					<button onClick={handleAskClick}>Ask</button>
 				</div>
 			</div>
+			{askFormActive && <AskForm setAskFormActive={setAskFormActive} />}
 		</main>
 	);
 }
