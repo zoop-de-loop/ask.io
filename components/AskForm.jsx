@@ -17,7 +17,7 @@ export default function AskForm({ setAskFormActive }) {
 	return (
 		<div className={styles["form-pop-up"]}>
 			<div className={styles.background} onClick={handleBackgroundClicked} />
-			<form className={styles["ask-form"]}>
+			<form>
 				<h2>Ask whatever!</h2>
 				<fieldset>
 					<input type='text' placeholder='Type here...' />
