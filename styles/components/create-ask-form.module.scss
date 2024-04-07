@@ -67,21 +67,22 @@
 				gap: 1.75rem;
 				color: colors.$secondary;
 				font-size: 1.65rem;
+
 				input[type="checkbox"] {
 					display: none;
+				}
 
-					& + span {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						border: colors.$secondary 0.3rem solid;
-						color: colors.$secondary;
-						border-radius: 0.75rem;
-						width: 2.75rem;
-						aspect-ratio: 1/1;
-						font-weight: 800;
-						font-size: 1.65rem;
-					}
+				.checkbox {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border: colors.$secondary 0.3rem solid;
+					color: colors.$secondary;
+					border-radius: 0.75rem;
+					width: 2.75rem;
+					aspect-ratio: 1/1;
+					font-weight: 800;
+					font-size: 1.65rem;
 				}
 			}
 		}
