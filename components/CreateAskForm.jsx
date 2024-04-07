@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styles from "@/styles/components/ask-form.module.scss";
+import styles from "@/styles/components/create-ask-form.module.scss";
 
-export default function AskForm({ setAskFormActive }) {
+export default function CreateAskForm({ setAskFormActive }) {
 	const [isAnonymous, setIsAnonymous] = useState(false);
 
 	const handleAnonymousChange = () => {

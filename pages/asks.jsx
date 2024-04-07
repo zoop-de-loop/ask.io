@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "@/styles/pages/asks.module.scss";
 import Ask from "@/components/Ask";
 import content from "@/server/content";
-import AskForm from "@/components/AskForm";
+import CreateAskForm from "@/components/CreateAskForm";
 
 export default function Asks() {
 	const contentArr = Object.entries(content);
@@ -60,7 +60,7 @@ export default function Asks() {
 					<button onClick={handleAskClick}>Ask</button>
 				</div>
 			</div>
-			{isModalOpen && <AskForm setAskFormActive={setIsModalOpen} />}
+			{isModalOpen && <CreateAskForm setAskFormActive={setIsModalOpen} />}
 		</main>
 	);
 }
