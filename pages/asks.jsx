@@ -10,16 +10,13 @@ export default function Asks() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const handleAskClick = () => {
-		setIsModalOpen((prev) => {
-			return !prev;
-		});
+		setIsModalOpen((prev) => !prev);
 	};
 
 	const toggleLike = () => {
-		setShowOnlyLikedAsks((prev) => {
-			return !prev;
-		});
+		setShowOnlyLikedAsks((prev) => !prev);
 	};
+
 	let showAsk = [];
 
 	if (showOnlyLikedAsks) {
