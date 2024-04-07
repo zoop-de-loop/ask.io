@@ -22,7 +22,7 @@ export default function AskForm({ setAskFormActive }) {
 				<fieldset>
 					<input type='text' placeholder='Type here...' />
 					<label htmlFor='anonymous'>
-						<input type='checkbox' name='anonymous' id='anonymous' onClick={handleCheckboxClicked} />
+						<input type='checkbox' id='anonymous' onClick={handleCheckboxClicked} />
 						<span>{isAnonymous ? "✓" : null}</span>
 						Anonymous
 					</label>
