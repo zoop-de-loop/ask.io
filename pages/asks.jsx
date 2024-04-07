@@ -23,16 +23,16 @@ export default function Asks() {
 	let showAsk = [];
 
 	if (likedActive) {
-		const likedAsks = contentArr.filter((dataArr) => dataArr[1]["like"] === true);
+		const likedAsks = contentArr.filter((dataArr) => dataArr[1].like === true);
 		showAsk = likedAsks.map((dataArr) => {
 			return (
 				<Ask
 					key={dataArr[0]}
 					id={dataArr[0]}
-					ask={dataArr[1]["ask"]}
-					isLiked={dataArr[1]["like"]}
-					isAnonymous={dataArr[1]["anonymous"]}
-					userId={dataArr[1]["userId"]}
+					ask={dataArr[1].ask}
+					isLiked={dataArr[1].like}
+					isAnonymous={dataArr[1].anonymous}
+					userId={dataArr[1].userId}
 				/>
 			);
 		});
@@ -42,10 +42,10 @@ export default function Asks() {
 				<Ask
 					key={dataArr[0]}
 					id={dataArr[0]}
-					ask={dataArr[1]["ask"]}
-					isLiked={dataArr[1]["like"]}
-					isAnonymous={dataArr[1]["anonymous"]}
-					userId={dataArr[1]["userId"]}
+					ask={dataArr[1].ask}
+					isLiked={dataArr[1].like}
+					isAnonymous={dataArr[1].anonymous}
+					userId={dataArr[1].userId}
 				/>
 			);
 		});
