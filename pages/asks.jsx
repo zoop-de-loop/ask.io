@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styles from "@/styles/pages/asks.module.scss";
 import Ask from "@/components/Ask";
-import asksData from "@/server/content";
+import content from "@/server/content";
 import AskForm from "@/components/AskForm";
 
 export default function Asks() {
-	const askDataArr = Object.entries(asksData);
+	const contentArr = Object.entries(content);
 	const [likedActive, setLikedActive] = useState(false);
 	const [askFormActive, setAskFormActive] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Asks() {
 	let showAsk = [];
 
 	if (likedActive) {
-		const likedAsks = askDataArr.filter((dataArr) => dataArr[1]["like"] === true);
+		const likedAsks = contentArr.filter((dataArr) => dataArr[1]["like"] === true);
 		showAsk = likedAsks.map((dataArr) => {
 			return (
 				<Ask
@@ -32,11 +32,12 @@ export default function Asks() {
 					ask={dataArr[1]["ask"]}
 					isLiked={dataArr[1]["like"]}
 					isAnonymous={dataArr[1]["anonymous"]}
+					userId={dataArr[1]["userId"]}
 				/>
 			);
 		});
 	} else {
-		showAsk = askDataArr.map((dataArr) => {
+		showAsk = contentArr.map((dataArr) => {
 			return (
 				<Ask
 					key={dataArr[0]}
@@ -44,6 +45,7 @@ export default function Asks() {
 					ask={dataArr[1]["ask"]}
 					isLiked={dataArr[1]["like"]}
 					isAnonymous={dataArr[1]["anonymous"]}
+					userId={dataArr[1]["userId"]}
 				/>
 			);
 		});

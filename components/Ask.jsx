@@ -1,8 +1,9 @@
 import { useState } from "react";
 import styles from "@/styles/components/ask.module.scss";
 import content from "@/server/content";
+import users from "@/server/users";
 
-export default function Ask({ id, ask, isLiked, isAnonymous }) {
+export default function Ask({ id, ask, isLiked, isAnonymous, userId }) {
 	const [isCurrentlyLiked, setIsCurrentlyLiked] = useState(isLiked);
 
 	const handleClicked = () => {
@@ -18,8 +19,8 @@ export default function Ask({ id, ask, isLiked, isAnonymous }) {
 			<img src='/speechBubble.png' alt='speech bubble' />
 			<img onClick={handleClicked} src={isCurrentlyLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
 			{!isAnonymous && (
-				<a href={`/account/${id}`}>
-					<img src='/lio_img.png' />
+				<a href={`/account/${userId}`}>
+					<img src={users[userId]["photo"]} />
 				</a>
 			)}
 		</article>
