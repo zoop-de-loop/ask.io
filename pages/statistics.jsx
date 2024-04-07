@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Stat from "@/components/Stat";
 import styles from "@/styles/pages/statistics.module.scss";
+import Stat from "@/components/Stat";
 
 const data = [
 	{ id: 0, amount: 19, name: "all asks" },

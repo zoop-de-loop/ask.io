@@ -1,9 +1,9 @@
+import styles from "@/styles/pages/home.module.scss";
 import AsksIcon from "@/components/icons/AsksIcon";
 import StatisticsIcon from "@/components/icons/StatisticsIcon";
 import MyProfileIcon from "@/components/icons/MyProfileIcon";
 import SettingsIcon from "@/components/icons/SettingsIcon";
 import LinkCard from "@/components/LinkCard";
-import styles from "@/styles/pages/home.module.scss";
 
 export default function Home() {
 	return (

@@ -1,5 +1,5 @@
+import { useState } from "react";
 import styles from "@/styles/components/ask-form.module.scss";
-import React, { useState } from "react";
 
 export default function AskForm({ setAskFormActive }) {
 	const [isMarked, setIsMarked] = useState(false);

@@ -1,8 +1,8 @@
+import { useState } from "react";
 import styles from "@/styles/pages/asks.module.scss";
 import Ask from "@/components/Ask";
 import asksData from "@/server/asksData";
 import AskForm from "@/components/AskForm";
-import React, { useState } from "react";
 
 export default function Asks() {
 	const askDataArr = Object.entries(asksData);

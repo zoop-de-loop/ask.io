@@ -1,5 +1,5 @@
+import { useState } from "react";
 import styles from "@/styles/components/ask.module.scss";
-import React, { useState } from "react";
 import asksData from "@/server/asksData";
 
 export default function Ask({ id, ask, like, anonymous }) {
