@@ -6,7 +6,7 @@ import CreateAskForm from "@/components/CreateAskForm";
 
 export default function Asks() {
 	const contentArr = Object.entries(content);
-	const [likedActive, setLikedActive] = useState(false);
+	const [showOnlyLikedAsks, setShowOnlyLikedAsks] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const handleAskClick = () => {
@@ -16,13 +16,13 @@ export default function Asks() {
 	};
 
 	const toggleLike = () => {
-		setLikedActive((prev) => {
+		setShowOnlyLikedAsks((prev) => {
 			return !prev;
 		});
 	};
 	let showAsk = [];
 
-	if (likedActive) {
+	if (showOnlyLikedAsks) {
 		const likedAsks = contentArr.filter((dataArr) => dataArr[1].like === true);
 		showAsk = likedAsks.map((dataArr) => {
 			return (
@@ -56,7 +56,7 @@ export default function Asks() {
 			<div className={styles["asks-and-buttons"]}>
 				<div className={styles.asks}>{showAsk}</div>
 				<div className={styles.buttons}>
-					<button onClick={toggleLike}>{likedActive ? "Show All Asks" : "Show liked Asks"}</button>
+					<button onClick={toggleLike}>{showOnlyLikedAsks ? "Show All Asks" : "Show liked Asks"}</button>
 					<button onClick={handleAskClick}>Ask</button>
 				</div>
 			</div>
