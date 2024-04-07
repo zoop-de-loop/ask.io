@@ -7,10 +7,10 @@ import AskForm from "@/components/AskForm";
 export default function Asks() {
 	const contentArr = Object.entries(content);
 	const [likedActive, setLikedActive] = useState(false);
-	const [askFormActive, setAskFormActive] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const handleAskClick = () => {
-		setAskFormActive((prev) => {
+		setIsModalOpen((prev) => {
 			return !prev;
 		});
 	};
@@ -60,7 +60,7 @@ export default function Asks() {
 					<button onClick={handleAskClick}>Ask</button>
 				</div>
 			</div>
-			{askFormActive && <AskForm setAskFormActive={setAskFormActive} />}
+			{isModalOpen && <AskForm setAskFormActive={setIsModalOpen} />}
 		</main>
 	);
 }
