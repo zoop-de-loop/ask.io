@@ -6,7 +6,7 @@ import users from "@/server/users";
 export default function Ask({ id, ask, isLiked, isAnonymous, userId }) {
 	const [isCurrentlyLiked, setIsCurrentlyLiked] = useState(isLiked);
 
-	const handleClicked = () => {
+	const toggleLike = () => {
 		setIsCurrentlyLiked((prev) => {
 			content[id]["like"] = !prev;
 			return !prev;
@@ -17,7 +17,7 @@ export default function Ask({ id, ask, isLiked, isAnonymous, userId }) {
 		<article className={styles.ask}>
 			<h2>{ask}</h2>
 			<img src='/speechBubble.png' alt='speech bubble' />
-			<img onClick={handleClicked} src={isCurrentlyLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
+			<img onClick={toggleLike} src={isCurrentlyLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
 			{!isAnonymous && (
 				<a href={`/account/${userId}`}>
 					<img src={users[userId]["photo"]} />

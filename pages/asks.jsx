@@ -15,7 +15,7 @@ export default function Asks() {
 		});
 	};
 
-	const handleLikeButtonClick = () => {
+	const toggleLike = () => {
 		setLikedActive((prev) => {
 			return !prev;
 		});
@@ -56,7 +56,7 @@ export default function Asks() {
 			<div className={styles["asks-and-buttons"]}>
 				<div className={styles.asks}>{showAsk}</div>
 				<div className={styles.buttons}>
-					<button onClick={handleLikeButtonClick}>{likedActive ? "Show All Asks" : "Show liked Asks"}</button>
+					<button onClick={toggleLike}>{likedActive ? "Show All Asks" : "Show liked Asks"}</button>
 					<button onClick={handleAskClick}>Ask</button>
 				</div>
 			</div>
