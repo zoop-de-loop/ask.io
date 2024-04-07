@@ -17,36 +17,22 @@ export default function Asks() {
 		setShowOnlyLikedAsks((prev) => !prev);
 	};
 
-	let showAsk = [];
-
-	if (showOnlyLikedAsks) {
-		const likedAsks = contentArr.filter((dataArr) => dataArr[1].like === true);
-		showAsk = likedAsks.map((dataArr) => {
-			return (
+	const showAsk = contentArr.reduce((acc, [id, askContent]) => {
+		if (showOnlyLikedAsks && askContent.like !== true) {
+		} else {
+			acc.push(
 				<Ask
-					key={dataArr[0]}
-					id={dataArr[0]}
-					ask={dataArr[1].ask}
-					isLiked={dataArr[1].like}
-					isAnonymous={dataArr[1].anonymous}
-					userId={dataArr[1].userId}
+					key={id}
+					id={id}
+					ask={askContent.ask}
+					isLiked={askContent.like}
+					isAnonymous={askContent.anonymous}
+					userId={askContent.userId}
 				/>
 			);
-		});
-	} else {
-		showAsk = contentArr.map((dataArr) => {
-			return (
-				<Ask
-					key={dataArr[0]}
-					id={dataArr[0]}
-					ask={dataArr[1].ask}
-					isLiked={dataArr[1].like}
-					isAnonymous={dataArr[1].anonymous}
-					userId={dataArr[1].userId}
-				/>
-			);
-		});
-	}
+		}
+		return acc;
+	}, []);
 
 	return (
 		<main>
