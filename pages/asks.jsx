@@ -30,8 +30,8 @@ export default function Asks() {
 					key={dataArr[0]}
 					id={dataArr[0]}
 					ask={dataArr[1]["ask"]}
-					like={dataArr[1]["like"]}
-					anonymous={dataArr[1]["anonymous"]}
+					isLiked={dataArr[1]["like"]}
+					isAnonymous={dataArr[1]["anonymous"]}
 				/>
 			);
 		});
@@ -42,8 +42,8 @@ export default function Asks() {
 					key={dataArr[0]}
 					id={dataArr[0]}
 					ask={dataArr[1]["ask"]}
-					like={dataArr[1]["like"]}
-					anonymous={dataArr[1]["anonymous"]}
+					isLiked={dataArr[1]["like"]}
+					isAnonymous={dataArr[1]["anonymous"]}
 				/>
 			);
 		});
