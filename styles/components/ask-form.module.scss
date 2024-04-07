@@ -37,12 +37,13 @@
 			width: 100%;
 		}
 
-		.user-information {
+		fieldset {
 			width: 87.5%;
 			display: flex;
 			flex-direction: column;
 			align-content: center;
 			gap: 2rem;
+			border: none;
 
 			input[type="text"] {
 				border: none;
@@ -119,7 +120,7 @@
 				rotate: 0deg;
 			}
 
-			.user-information {
+			fieldset {
 				gap: 1.5rem;
 
 				input[type="text"] {

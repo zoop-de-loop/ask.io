@@ -19,14 +19,14 @@ export default function AskForm({ setAskFormActive }) {
 			<div className={styles.background} onClick={handleBackgroundClicked} />
 			<form className={styles["ask-form"]}>
 				<h2>Ask whatever!</h2>
-				<div className={styles["user-information"]}>
+				<fieldset>
 					<input type='text' placeholder='Type here...' />
 					<label htmlFor='anonymous'>
 						<input type='checkbox' name='anonymous' id='anonymous' onClick={handleCheckboxClicked} />
 						<span>{isAnonymous ? "✓" : null}</span>
 						<span>Anonymous</span>
 					</label>
-				</div>
+				</fieldset>
 				<input type='submit' value='Sure' />
 			</form>
 		</div>
