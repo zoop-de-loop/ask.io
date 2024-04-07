@@ -17,7 +17,7 @@ export default function Asks() {
 		setShowOnlyLikedAsks((prev) => !prev);
 	};
 
-	const showAsk = contentArr.reduce((acc, [id, askContent]) => {
+	const askElements = contentArr.reduce((acc, [id, askContent]) => {
 		if (showOnlyLikedAsks && askContent.like !== true) {
 		} else {
 			acc.push(
@@ -37,7 +37,7 @@ export default function Asks() {
 	return (
 		<main>
 			<div className={styles["asks-and-buttons"]}>
-				<div className={styles.asks}>{showAsk}</div>
+				<div className={styles.asks}>{askElements}</div>
 				<div className={styles.buttons}>
 					<button onClick={toggleLike}>{showOnlyLikedAsks ? "Show All Asks" : "Show liked Asks"}</button>
 					<button onClick={handleAskClick}>Ask</button>
