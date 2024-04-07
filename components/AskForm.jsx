@@ -4,25 +4,23 @@ import styles from "@/styles/components/ask-form.module.scss";
 export default function AskForm({ setAskFormActive }) {
 	const [isAnonymous, setIsAnonymous] = useState(false);
 
-	const handleCheckboxClicked = () => {
-		setIsAnonymous((prev) => {
-			return !prev;
-		});
+	const handleAnonymousChange = () => {
+		setIsAnonymous((prev) => !prev);
 	};
 
-	const handleBackgroundClicked = () => {
+	const closeModal = () => {
 		setAskFormActive(false);
 	};
 
 	return (
 		<div className={styles["form-pop-up"]}>
-			<div className={styles.background} onClick={handleBackgroundClicked} />
+			<div className={styles.background} onClick={closeModal} />
 			<form>
 				<h2>Ask whatever!</h2>
 				<fieldset>
 					<input type='text' placeholder='Type here...' />
 					<label htmlFor='anonymous'>
-						<input type='checkbox' id='anonymous' onClick={handleCheckboxClicked} />
+						<input type='checkbox' id='anonymous' onClick={handleAnonymousChange} />
 						<span>{isAnonymous && "✓"}</span>
 						Anonymous
 					</label>
