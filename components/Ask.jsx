@@ -3,10 +3,10 @@ import styles from "@/styles/components/ask.module.scss";
 import content from "@/server/content";
 
 export default function Ask({ id, ask, like, anonymous }) {
-	const [isLiked, setIsLike] = useState(like);
+	const [isLiked, setIsLiked] = useState(like);
 
 	const handleClicked = () => {
-		setIsLike((prev) => {
+		setIsLiked((prev) => {
 			content[id]["like"] = !prev;
 			return !prev;
 		});
