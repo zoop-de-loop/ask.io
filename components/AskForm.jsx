@@ -2,10 +2,10 @@ import { useState } from "react";
 import styles from "@/styles/components/ask-form.module.scss";
 
 export default function AskForm({ setAskFormActive }) {
-	const [isMarked, setIsMarked] = useState(false);
+	const [isAnonymous, setIsAnonymous] = useState(false);
 
 	const handleCheckboxClicked = () => {
-		setIsMarked((prev) => {
+		setIsAnonymous((prev) => {
 			return !prev;
 		});
 	};
@@ -23,7 +23,7 @@ export default function AskForm({ setAskFormActive }) {
 					<input type='text' placeholder='Type here...' />
 					<label htmlFor='anonymous'>
 						<input type='checkbox' name='anonymous' id='anonymous' onClick={handleCheckboxClicked} />
-						<span>{isMarked ? "✓" : null}</span>
+						<span>{isAnonymous ? "✓" : null}</span>
 						<span>Anonymous</span>
 					</label>
 				</div>
