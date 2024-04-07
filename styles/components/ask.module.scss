@@ -19,19 +19,19 @@
 
 	img {
 		position: absolute;
-
-		&:nth-child(2) {
-			right: 0.25rem;
-			top: 0.2rem;
-			width: 1.5rem;
-		}
-
-		&:nth-child(3) {
-			left: 0.65rem;
-			bottom: 0.5rem;
-			width: 1.2rem;
-		}
 	}
+	.speech-bubble {
+		right: 0.25rem;
+		top: 0.2rem;
+		width: 1.5rem;
+	}
+
+	.like-heart {
+		left: 0.65rem;
+		bottom: 0.5rem;
+		width: 1.2rem;
+	}
+
 	a {
 		img {
 			width: 1.75rem;

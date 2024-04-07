@@ -16,8 +16,13 @@ export default function Ask({ id, ask, isLiked, isAnonymous, userId }) {
 	return (
 		<article className={styles.ask}>
 			<h2>{ask}</h2>
-			<img src='/speechBubble.png' alt='speech bubble' />
-			<img onClick={toggleLike} src={isCurrentlyLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
+			<img className={styles["speech-bubble"]} src='/speechBubble.png' alt='speech bubble' />
+			<img
+				className={styles["like-heart"]}
+				onClick={toggleLike}
+				src={isCurrentlyLiked ? "/likeActive.png" : "/likeNotActive.png"}
+				alt='like'
+			/>
 			{!isAnonymous && (
 				<a href={`/account/${userId}`}>
 					<img src={users[userId].photo} alt="user's photo" />
