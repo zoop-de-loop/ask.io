@@ -18,7 +18,7 @@ export default function Asks() {
 	};
 
 	const askElements = contentArr.reduce((acc, [id, askContent]) => {
-		if (showOnlyLikedAsks && askContent.like !== true) {
+		if (showOnlyLikedAsks && !askContent.like) {
 		} else {
 			acc.push(
 				<Ask
