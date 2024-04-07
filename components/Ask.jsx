@@ -20,7 +20,7 @@ export default function Ask({ id, ask, isLiked, isAnonymous, userId }) {
 			<img onClick={toggleLike} src={isCurrentlyLiked ? "/likeActive.png" : "/likeNotActive.png"} alt='like' />
 			{!isAnonymous && (
 				<a href={`/account/${userId}`}>
-					<img src={users[userId].photo} />
+					<img src={users[userId].photo} alt="user's photo" />
 				</a>
 			)}
 		</article>
