@@ -17,26 +17,29 @@
 		user-select: none;
 	}
 
-	img {
-		position: absolute;
-	}
 	.speech-bubble {
+		position: absolute;
 		right: 0.25rem;
 		top: 0.2rem;
 		width: 1.5rem;
 	}
 
 	.like-heart {
+		position: absolute;
 		left: 0.65rem;
 		bottom: 0.5rem;
 		width: 1.2rem;
 	}
 
 	a {
+		position: absolute;
+		width: 1.75rem;
+		height: 1.75rem;
+		top: -0.5rem;
+		left: -0.5rem;
+
 		img {
-			width: 1.75rem;
-			top: -0.5rem;
-			left: -0.5rem;
+			width: 100%;
 			border-radius: 50%;
 		}
 	}
@@ -45,6 +48,7 @@
 @media only screen and (max-width: 800px) {
 	.ask {
 		width: 100%;
+
 		h2 {
 			font-size: 1.5rem;
 		}
