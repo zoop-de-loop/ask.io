@@ -50,16 +50,16 @@
 			border: solid 0.2rem colors.$secondary;
 			font-size: 1.5rem;
 			font-weight: 600;
+		}
 
-			&:nth-child(1) {
-				color: colors.$secondary;
-				background-color: colors.$primary;
-			}
+		.outlined {
+			color: colors.$secondary;
+			background-color: colors.$primary;
+		}
 
-			&:nth-child(2) {
-				color: colors.$primary;
-				background-color: colors.$secondary;
-			}
+		.filled {
+			color: colors.$primary;
+			background-color: colors.$secondary;
 		}
 	}
 }

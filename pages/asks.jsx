@@ -31,6 +31,7 @@ export default function Asks() {
 				/>
 			);
 		}
+
 		return acc;
 	}, []);
 
@@ -39,8 +40,12 @@ export default function Asks() {
 			<div className={styles["asks-and-buttons"]}>
 				<div className={styles.asks}>{askElements}</div>
 				<div className={styles.buttons}>
-					<button onClick={toggleLike}>{showOnlyLikedAsks ? "Show All Asks" : "Show liked Asks"}</button>
-					<button onClick={handleAskClick}>Ask</button>
+					<button className={styles.outlined} onClick={toggleLike}>
+						{showOnlyLikedAsks ? "Show All Asks" : "Show liked Asks"}
+					</button>
+					<button className={styles.filled} onClick={handleAskClick}>
+						Ask
+					</button>
 				</div>
 			</div>
 			{isModalOpen && <CreateAskForm setAskFormActive={setIsModalOpen} />}
