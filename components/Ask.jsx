@@ -1,13 +1,13 @@
 import { useState } from "react";
 import styles from "@/styles/components/ask.module.scss";
-import asksData from "@/server/asksData";
+import content from "@/server/content";
 
 export default function Ask({ id, ask, like, anonymous }) {
 	const [isLiked, setIsLike] = useState(like);
 
 	const handleClicked = () => {
 		setIsLike((prev) => {
-			asksData[id]["like"] = !prev;
+			content[id]["like"] = !prev;
 			return !prev;
 		});
 	};

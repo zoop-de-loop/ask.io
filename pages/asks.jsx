@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "@/styles/pages/asks.module.scss";
 import Ask from "@/components/Ask";
-import asksData from "@/server/asksData";
+import asksData from "@/server/content";
 import AskForm from "@/components/AskForm";
 
 export default function Asks() {

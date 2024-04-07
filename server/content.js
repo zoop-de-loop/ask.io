@@ -1,4 +1,4 @@
-const asksData = {
+const content = {
 	"0": {ask: "Can a dog love me?", like: false, anonymous: true },
 	"1": {ask: "Can a dog love me?", like: true, anonymous: true },
 	"2": {ask: "Can a dog love me?", like: false, anonymous: true },
@@ -27,4 +27,4 @@ const asksData = {
 	"25": { ask: "Can a dog love me?", like: false, anonymous: true },
 };
 
-export default asksData;
+export default content;
