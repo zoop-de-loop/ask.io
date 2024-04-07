@@ -26,6 +26,8 @@
 
 	.like-heart {
 		position: absolute;
+		cursor: pointer;
+
 		left: 0.65rem;
 		bottom: 0.5rem;
 		width: 1.2rem;
@@ -33,6 +35,8 @@
 
 	a {
 		position: absolute;
+		cursor: pointer;
+
 		width: 1.75rem;
 		height: 1.75rem;
 		top: -0.5rem;
