@@ -4,19 +4,22 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
 
 	.background {
-		height: 100vh;
-		width: 100vw;
+		position: absolute;
+		height: 100%;
+		width: 100%;
 		background-color: rgba($color: #000000, $alpha: 0.5);
 		backdrop-filter: blur(5px);
 	}
 
 	form {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		position: relative;
 		background-color: colors.$primary;
 		width: 40rem;
 		height: 35rem;
