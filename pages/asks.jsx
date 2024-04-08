@@ -3,6 +3,7 @@ import styles from "@/styles/pages/asks.module.scss";
 import Ask from "@/components/Ask";
 import content from "@/server/content";
 import CreateAskForm from "@/components/CreateAskForm";
+import Modal from "@/components/Modal";
 
 export default function Asks() {
 	const contentArr = Object.entries(content);
@@ -46,7 +47,7 @@ export default function Asks() {
 					Ask
 				</button>
 			</div>
-			{isModalOpen && <CreateAskForm setAskFormActive={setIsModalOpen} />}
+			{<Modal content={<CreateAskForm />} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
 		</main>
 	);
 }
