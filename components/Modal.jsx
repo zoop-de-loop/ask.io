@@ -1,28 +1,28 @@
 import { useRef, useEffect } from "react";
 import styles from "@/styles/components/modal.module.scss";
 
-export default function Modal({ children, isModalOpen, setIsModalOpen }) {
+export default function Modal({ children, isOpen, setIsOpen }) {
 	const modalRef = useRef(null);
 
 	useEffect(() => {
-		if (isModalOpen) {
+		if (isOpen) {
 			modalRef.current.showModal();
 		}
-	}, [isModalOpen]);
+	}, [isOpen]);
 
 	const handleBackgroundClicked = (event) => {
 		if (event.target === modalRef.current) {
-			setIsModalOpen(false);
+			setIsOpen(false);
 		}
 	};
 
 	const handleButtonClicked = (event) => {
 		if (event.key === "Escape") {
-			setIsModalOpen(false);
+			setIsOpen(false);
 		}
 	};
 
-	if (!isModalOpen) {
+	if (!isOpen) {
 		return;
 	}
 
