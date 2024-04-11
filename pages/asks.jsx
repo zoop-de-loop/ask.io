@@ -48,7 +48,9 @@ export default function Asks() {
 					Ask
 				</button>
 			</div>
-			{<Modal content={<CreateAskForm />} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
+			<Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
+				<CreateAskForm />
+			</Modal>
 		</main>
 	);
 }

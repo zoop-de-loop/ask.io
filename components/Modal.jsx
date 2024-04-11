@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import styles from "@/styles/components/modal.module.scss";
 
-export default function Modal({ content, isModalOpen, setIsModalOpen }) {
+export default function Modal({ children, isModalOpen, setIsModalOpen }) {
 	const modalRef = useRef(null);
 
 	useEffect(() => {
@@ -27,8 +27,8 @@ export default function Modal({ content, isModalOpen, setIsModalOpen }) {
 	}
 
 	return (
-		<dialog className={styles.modal} onClick={handleBackgroundClicked} ref={modalRef} onKeyDown={handleButtonClicked}>
-			{content}
+		<dialog ref={modalRef} className={styles.modal} onClick={handleBackgroundClicked} onKeyDown={handleButtonClicked}>
+			{children}
 		</dialog>
 	);
 }
