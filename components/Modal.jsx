@@ -10,13 +10,13 @@ export default function Modal({ content, isModalOpen, setIsModalOpen }) {
 		}
 	}, [isModalOpen]);
 
-	const backgroundClicked = (event) => {
+	const handleBackgroundClicked = (event) => {
 		if (event.target === modalRef.current) {
 			setIsModalOpen(false);
 		}
 	};
 
-	const buttonClicked = (event) => {
+	const handleButtonClicked = (event) => {
 		if (event.key === "Escape") {
 			setIsModalOpen(false);
 		}
@@ -27,7 +27,7 @@ export default function Modal({ content, isModalOpen, setIsModalOpen }) {
 	}
 
 	return (
-		<dialog className={styles.modal} onClick={backgroundClicked} ref={modalRef} onKeyDown={buttonClicked}>
+		<dialog className={styles.modal} onClick={handleBackgroundClicked} ref={modalRef} onKeyDown={handleButtonClicked}>
 			{content}
 		</dialog>
 	);
