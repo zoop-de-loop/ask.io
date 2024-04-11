@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import styles from "@/styles/pages/asks.module.scss";
-import Ask from "@/components/Ask";
 import content from "@/server/content";
+import Ask from "@/components/Ask";
 import CreateAskForm from "@/components/CreateAskForm";
 import Modal from "@/components/Modal";
 
