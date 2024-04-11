@@ -2,16 +2,16 @@ import { useRef, useEffect } from "react";
 import styles from "@/styles/components/modal.module.scss";
 
 export default function Modal({ children, isOpen, setIsOpen }) {
-	const modalRef = useRef(null);
+	const ref = useRef(null);
 
 	useEffect(() => {
 		if (isOpen) {
-			modalRef.current.showModal();
+			ref.current.showModal();
 		}
 	}, [isOpen]);
 
 	const handleBackgroundClicked = (event) => {
-		if (event.target === modalRef.current) {
+		if (event.target === ref.current) {
 			setIsOpen(false);
 		}
 	};
@@ -27,7 +27,7 @@ export default function Modal({ children, isOpen, setIsOpen }) {
 	}
 
 	return (
-		<dialog ref={modalRef} className={styles.modal} onClick={handleBackgroundClicked} onKeyDown={handleButtonClicked}>
+		<dialog ref={ref} className={styles.modal} onClick={handleBackgroundClicked} onKeyDown={handleButtonClicked}>
 			{children}
 		</dialog>
 	);
