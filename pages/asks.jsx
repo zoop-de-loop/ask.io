@@ -20,8 +20,7 @@ export default function Asks() {
 
 	const askElements = useMemo(() => {
 		return contentArr.reduce((acc, [id, askContent]) => {
-			if (showOnlyLikedAsks && !askContent.like) {
-			} else {
+			if (!showOnlyLikedAsks || (showOnlyLikedAsks && askContent.like)) {
 				acc.push(
 					<Ask
 						key={id}
