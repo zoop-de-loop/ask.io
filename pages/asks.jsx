@@ -6,7 +6,6 @@ import CreateAskForm from "@/components/CreateAskForm";
 import Modal from "@/components/Modal";
 
 export default function Asks() {
-	const contentArr = Object.entries(content);
 	const [showOnlyLikedAsks, setShowOnlyLikedAsks] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -19,7 +18,7 @@ export default function Asks() {
 	};
 
 	const askElements = useMemo(() => {
-		return contentArr.reduce((acc, [id, askContent]) => {
+		return Object.entries(content).reduce((acc, [id, askContent]) => {
 			if (!showOnlyLikedAsks || (showOnlyLikedAsks && askContent.like)) {
 				acc.push(
 					<Ask
