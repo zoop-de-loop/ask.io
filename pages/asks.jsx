@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import styles from "@/styles/pages/asks.module.scss";
-import content from "@/server/content";
+import content from "@/server/asks";
 import Ask from "@/components/Ask";
 import CreateAskForm from "@/components/CreateAskForm";
 import Modal from "@/components/Modal";
@@ -24,7 +24,7 @@ export default function Asks() {
 					<Ask
 						key={id}
 						id={id}
-						ask={askContent.ask}
+						content={askContent.content}
 						isLiked={askContent.like}
 						isAnonymous={askContent.anonymous}
 						userId={askContent.userId}
