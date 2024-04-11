@@ -18,17 +18,10 @@ export default function Asks() {
 	};
 
 	const askElements = useMemo(() => {
-		return Object.entries(content).reduce((acc, [id, askContent]) => {
-			if (!showOnlyLikedAsks || (showOnlyLikedAsks && askContent.like)) {
+		return Object.entries(content).reduce((acc, [id, ask]) => {
+			if (!showOnlyLikedAsks || (showOnlyLikedAsks && ask.like)) {
 				acc.push(
-					<Ask
-						key={id}
-						id={id}
-						content={askContent.content}
-						isLiked={askContent.like}
-						isAnonymous={askContent.anonymous}
-						userId={askContent.userId}
-					/>
+					<Ask key={id} id={id} content={ask.content} isLiked={ask.like} isAnonymous={ask.anonymous} userId={ask.userId} />
 				);
 			}
 
