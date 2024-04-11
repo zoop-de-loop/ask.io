@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import styles from "@/styles/pages/asks.module.scss";
 import Ask from "@/components/Ask";
 import content from "@/server/content";
@@ -18,23 +18,25 @@ export default function Asks() {
 		setShowOnlyLikedAsks((prev) => !prev);
 	};
 
-	const askElements = contentArr.reduce((acc, [id, askContent]) => {
-		if (showOnlyLikedAsks && !askContent.like) {
-		} else {
-			acc.push(
-				<Ask
-					key={id}
-					id={id}
-					ask={askContent.ask}
-					isLiked={askContent.like}
-					isAnonymous={askContent.anonymous}
-					userId={askContent.userId}
-				/>
-			);
-		}
+	const askElements = useMemo(() => {
+		return contentArr.reduce((acc, [id, askContent]) => {
+			if (showOnlyLikedAsks && !askContent.like) {
+			} else {
+				acc.push(
+					<Ask
+						key={id}
+						id={id}
+						ask={askContent.ask}
+						isLiked={askContent.like}
+						isAnonymous={askContent.anonymous}
+						userId={askContent.userId}
+					/>
+				);
+			}
 
-		return acc;
-	}, []);
+			return acc;
+		}, []);
+	}, [showOnlyLikedAsks]);
 
 	return (
 		<main className={styles.main}>
