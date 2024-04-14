@@ -22,9 +22,7 @@ export default function Modal({ children, isOpen, setIsOpen }) {
 		}
 	};
 
-	if (!isOpen) {
-		return;
-	}
+	if (!isOpen) return;
 
 	return (
 		<dialog ref={ref} className={styles.modal} onClick={handleBackgroundClicked} onKeyDown={handleButtonClicked}>
