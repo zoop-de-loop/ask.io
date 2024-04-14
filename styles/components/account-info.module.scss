@@ -1,11 +1,9 @@
-@use "/styles/colors";
-
 #account-info {
 	margin-right: auto;
 	width: fit-content;
 	display: flex;
 	align-items: center;
-	color: colors.$secondary;
+	color: var(--secondary-color);
 	gap: 1.25rem;
 	font-size: min(2vw, 1.75rem);
 

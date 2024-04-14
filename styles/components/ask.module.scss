@@ -1,11 +1,9 @@
-@use "/styles/colors";
-
 .ask {
 	position: relative;
 	width: 21.25rem;
 	height: 4rem;
 	border-radius: 0.6rem;
-	background-color: colors.$secondary;
+	background-color: var(--secondary-color);
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;

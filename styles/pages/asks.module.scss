@@ -1,5 +1,3 @@
-@use "/styles/colors";
-
 .main {
 	height: 100%;
 	box-sizing: border-box;
@@ -31,7 +29,7 @@
 		}
 
 		&::-webkit-scrollbar-thumb {
-			background-color: colors.$secondary;
+			background-color: var(--secondary-color);
 		}
 	}
 
@@ -47,19 +45,19 @@
 			min-width: 12rem;
 			box-sizing: border-box;
 			border-radius: 0.5rem;
-			border: solid 0.2rem colors.$secondary;
+			border: solid 0.2rem var(--secondary-color);
 			font-size: 1.5rem;
 			font-weight: 600;
 		}
 
 		.outlined {
-			color: colors.$secondary;
-			background-color: colors.$primary;
+			color: var(--secondary-color);
+			background-color: var(--primary-color);
 		}
 
 		.filled {
-			color: colors.$primary;
-			background-color: colors.$secondary;
+			color: var(--primary-color);
+			background-color: var(--secondary-color);
 		}
 	}
 }

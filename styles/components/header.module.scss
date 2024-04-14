@@ -1,23 +1,21 @@
-@use "/styles/colors";
-
 #header {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
-	border-bottom: colors.$secondary 0.313rem solid;
+	border-bottom: var(--secondary-color) 0.313rem solid;
 	padding: 2rem 0;
 
 	h1 {
 		font-weight: 500;
 		position: absolute;
-		color: colors.$secondary;
+		color: var(--secondary-color);
 		font-size: min(4vw, 3rem);
 	}
 
 	a {
-		color: colors.$secondary;
+		color: var(--secondary-color);
 		font-size: min(2vw, 1.5rem);
 	}
 }
