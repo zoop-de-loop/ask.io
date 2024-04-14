@@ -8,7 +8,7 @@ export default function Ask({ id, content, isLiked, isAnonymous, userId }) {
 
 	const toggleLike = () => {
 		setIsCurrentlyLiked((prev) => {
-			asks[id].like = !prev;
+			asks[id].isLiked = !prev;
 			return !prev;
 		});
 	};
