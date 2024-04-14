@@ -1,0 +1,60 @@
+@use "/styles/colors";
+
+.ask {
+	position: relative;
+	width: 21.25rem;
+	height: 4rem;
+	border-radius: 0.6rem;
+	background-color: colors.$secondary;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		font-size: 1.7rem;
+		font-weight: 400;
+		user-select: none;
+	}
+
+	.speech-bubble {
+		position: absolute;
+		right: 0.25rem;
+		top: 0.2rem;
+		width: 1.5rem;
+	}
+
+	.like-heart {
+		position: absolute;
+		cursor: pointer;
+
+		left: 0.65rem;
+		bottom: 0.5rem;
+		width: 1.2rem;
+	}
+
+	a {
+		position: absolute;
+		cursor: pointer;
+		border-radius: 50%;
+		overflow: hidden;
+		width: 1.75rem;
+		height: 1.75rem;
+		top: -0.5rem;
+		left: -0.5rem;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.ask {
+		width: 100%;
+
+		h2 {
+			font-size: 1.5rem;
+		}
+	}
+}
