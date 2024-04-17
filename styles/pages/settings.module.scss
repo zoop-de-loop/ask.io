@@ -48,7 +48,6 @@
 				font-weight: bold;
 				color: gray;
 				width: 100%;
-				height: fit-content;
 				padding: 5px;
 				cursor: pointer;
 			}
@@ -56,6 +55,39 @@
 			h3 {
 				font-size: 1.9rem;
 				font-weight: 500;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.main {
+		flex-direction: column;
+
+		article {
+			h2 {
+				font-size: 1.25rem;
+			}
+
+			.theme-switch {
+				width: 265px;
+				height: 45px;
+				font-size: 1.15rem;
+			}
+
+			.font-size-switch {
+				width: 50px;
+				height: 110px;
+				padding-block: 5px;
+
+				button {
+					font-size: 18px;
+					padding: 2px;
+				}
+
+				h3 {
+					font-size: 1.75rem;
+				}
 			}
 		}
 	}
