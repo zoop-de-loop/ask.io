@@ -2,43 +2,67 @@ import { useEffect, useState } from "react";
 import styles from "@/styles/pages/settings.module.scss";
 
 export default function Settings() {
-	const [theme, setTheme] = useState("bright");
-	const [fontSize, setFontSize] = useState(16);
+	const [theme, setTheme] = useState("default");
+	const [fontSize, setFontSize] = useState(-1);
 
 	useEffect(() => {
-		localStorage.setItem("theme", theme);
+		if (localStorage.getItem("theme")) {
+			if (theme === "default") {
+				setTheme(localStorage.getItem("theme"));
+			} else {
+				localStorage.setItem("theme", theme);
+			}
+		} else {
+			localStorage.setItem("theme", "bright");
+		}
+		changeTheme(theme);
 	}, [theme]);
 
 	useEffect(() => {
-		localStorage.setItem("font-size", fontSize);
+		if (localStorage.getItem("font-size")) {
+			if (fontSize === -1) {
+				setFontSize(localStorage.getItem("font-size"));
+			} else {
+				localStorage.setItem("font-size", fontSize);
+			}
+		} else {
+			localStorage.setItem("font-size", 16);
+		}
+		document.documentElement.style.setProperty("--font-size", `${parseInt(fontSize)}px`);
 	}, [fontSize]);
 
 	const toggleTheme = () => {
 		setTheme((prev) => {
-			document.documentElement.style.setProperty("--primary-color", prev !== "bright" ? "#EC7373" : "#B95151");
-			document.documentElement.style.setProperty("--secondary-color", prev !== "bright" ? "#FFFFFF" : "#301E1E");
-			document.documentElement.style.setProperty("--text-color", prev !== "bright" ? "#000000" : "#FFFFFF");
-			return prev === "bright" ? "dark" : "bright";
+			if (prev === "bright") {
+				return changeTheme("dark");
+			} else {
+				return changeTheme("bright");
+			}
 		});
+	};
+
+	const changeTheme = (givenTheme) => {
+		document.documentElement.style.setProperty("--primary-color", givenTheme === "bright" ? "#EC7373" : "#B95151");
+		document.documentElement.style.setProperty("--secondary-color", givenTheme === "bright" ? "#FFFFFF" : "#301E1E");
+		document.documentElement.style.setProperty("--text-color", givenTheme === "bright" ? "#000000" : "#FFFFFF");
+		return givenTheme;
 	};
 
 	const handleFontPlusCLicked = () => {
 		setFontSize((prev) => {
-			if (prev < 20) {
-				document.documentElement.style.setProperty("--font-size", `${prev + 1}px`);
-				return prev + 1;
+			if (parseInt(prev) < 20) {
+				return parseInt(prev) + 1;
 			}
-			return prev;
+			return parseInt(prev);
 		});
 	};
 
 	const handleFontMinusCLicked = () => {
 		setFontSize((prev) => {
-			if (prev > 10) {
-				document.documentElement.style.setProperty("--font-size", `${prev - 1}px`);
-				return prev - 1;
+			if (parseInt(prev) > 10) {
+				return parseInt(prev) - 1;
 			}
-			return prev;
+			return parseInt(prev);
 		});
 	};
 
