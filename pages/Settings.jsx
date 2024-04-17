@@ -67,10 +67,22 @@ export default function Settings() {
 	};
 
 	return (
-		<main>
-			<button onClick={toggleTheme}>PRESS ME COLOR</button>
-			<button onClick={handleFontPlusCLicked}>PRESS ME FONT PLUS</button>
-			<button onClick={handleFontMinusCLicked}>PRESS ME FONT MINUS</button>
+		<main className={styles.main}>
+			<article className={styles.theme}>
+				<h2>theme -</h2>
+				<button className={styles["theme-switch"]} onClick={toggleTheme}>
+					{theme.toUpperCase()} THEME
+				</button>
+			</article>
+
+			<article>
+				<h2>font size -</h2>
+				<div className={styles["font-size-switch"]}>
+					<button onClick={handleFontPlusCLicked}>+</button>
+					<h3>{fontSize}</h3>
+					<button onClick={handleFontMinusCLicked}>-</button>
+				</div>
+			</article>
 		</main>
 	);
 }

@@ -1,0 +1,62 @@
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+
+	article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		h2 {
+			font-weight: 400;
+			font-size: 1.65rem;
+			color: var(--secondary-color);
+		}
+
+		.theme-switch {
+			width: 350px;
+			height: 60px;
+			background-color: var(--secondary-color);
+			color: var(--text-color);
+			border: none;
+			border-radius: 8px;
+			font-size: 1.35rem;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		.font-size-switch {
+			width: 60px;
+			height: 145px;
+			border-radius: 8px;
+			background-color: var(--secondary-color);
+			color: var(--text-color);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			padding-block: 10px;
+			box-sizing: border-box;
+
+			button {
+				background-color: transparent;
+				border: none;
+				font-size: 22px;
+				font-weight: bold;
+				color: gray;
+				width: 100%;
+				height: fit-content;
+				padding: 5px;
+				cursor: pointer;
+			}
+
+			h3 {
+				font-size: 1.9rem;
+				font-weight: 500;
+			}
+		}
+	}
+}
