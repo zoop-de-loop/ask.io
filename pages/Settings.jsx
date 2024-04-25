@@ -45,6 +45,7 @@ export default function Settings() {
 		document.documentElement.style.setProperty("--primary-color", givenTheme === "bright" ? "#EC7373" : "#B95151");
 		document.documentElement.style.setProperty("--secondary-color", givenTheme === "bright" ? "#FFFFFF" : "#301E1E");
 		document.documentElement.style.setProperty("--text-color", givenTheme === "bright" ? "#000000" : "#FFFFFF");
+		document.documentElement.style.setProperty("--invert", givenTheme == "bright" ? "0%" : "100%");
 		return givenTheme;
 	};
 

@@ -25,7 +25,7 @@
 	.like-heart {
 		position: absolute;
 		cursor: pointer;
-
+		filter: invert(var(--invert));
 		left: 0.65rem;
 		bottom: 0.5rem;
 		width: 1.2rem;

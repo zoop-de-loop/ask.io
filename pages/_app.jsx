@@ -23,10 +23,12 @@ export default function App({ Component, pageProps }) {
 				"--text-color",
 				localStorage.getItem("theme") === "bright" ? "#000000" : "#FFFFFF"
 			);
+			document.documentElement.style.setProperty("--invert", localStorage.getItem("theme") === "bright" ? "0%" : "100%");
 		} else {
 			document.documentElement.style.setProperty("--primary-color", "#EC7373");
 			document.documentElement.style.setProperty("--secondary-color", "#FFFFFF");
 			document.documentElement.style.setProperty("--text-color", "#000000");
+			document.documentElement.style.setProperty("--invert", "0%");
 		}
 	}, []);
 
