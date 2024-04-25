@@ -1,9 +1,9 @@
 .create-ask-form {
 	position: relative;
 	background-color: var(--primary-color);
-	width: 40rem;
-	height: 35rem;
-	border-radius: 0.75rem;
+	width: 640px;
+	height: 560px;
+	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -25,7 +25,7 @@
 		display: flex;
 		flex-direction: column;
 		align-content: center;
-		gap: 2rem;
+		gap: 32px;
 		border: none;
 
 		input[type="text"] {
@@ -92,7 +92,7 @@
 @media only screen and (max-width: 675px) {
 	.create-ask-form {
 		width: 85%;
-		height: 21.5rem;
+		height: 344px;
 
 		h2 {
 			top: 1rem;
@@ -103,7 +103,7 @@
 		}
 
 		fieldset {
-			gap: 1.5rem;
+			gap: 24px;
 
 			input[type="text"] {
 				height: 3rem;
@@ -120,6 +120,7 @@
 						width: 2rem;
 						aspect-ratio: 1/1;
 						font-weight: 800;
+						font-size: 1.25rem;
 					}
 				}
 
