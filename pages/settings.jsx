@@ -68,22 +68,22 @@ export default function Settings() {
 	};
 
 	return (
-		<main className={styles.main}>
-			<article className={styles.theme}>
+		<main id={styles.main}>
+			<section>
 				<h2>theme -</h2>
-				<button className={styles["theme-switch"]} onClick={toggleTheme}>
+				<button className={styles["theme-changer"]} onClick={toggleTheme}>
 					{theme} THEME
 				</button>
-			</article>
+			</section>
 
-			<article>
+			<section>
 				<h2>font size -</h2>
-				<div className={styles["font-size-switch"]}>
+				<div className={styles["font-size-counter"]}>
 					<button onClick={handleFontPlusCLicked}>+</button>
-					<h3>{fontSize}</h3>
+					<p>{fontSize}</p>
 					<button onClick={handleFontMinusCLicked}>-</button>
 				</div>
-			</article>
+			</section>
 		</main>
 	);
 }
