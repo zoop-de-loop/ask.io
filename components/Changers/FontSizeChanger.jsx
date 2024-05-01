@@ -8,39 +8,39 @@ export default function FontSizeChanger() {
 	useEffect(() => {
 		if (localStorage.getItem("font-size")) {
 			if (fontSize === -1) {
-				setFontSize(localStorage.getItem("font-size"));
+				setFontSize(parseInt(localStorage.getItem("font-size")));
 			} else {
-				localStorage.setItem("font-size", fontSize);
+				localStorage.setItem("font-size", parseInt(fontSize));
 			}
 		} else {
 			localStorage.setItem("font-size", 16);
+			setFontSize(parseInt(localStorage.getItem("font-size")));
 		}
+
 		document.documentElement.style.setProperty("--font-size", `${parseInt(fontSize)}px`);
 	}, [fontSize]);
 
-	const handleFontPlusCLicked = () => {
-		setFontSize((prev) => {
-			if (parseInt(prev) < 20) {
-				return parseInt(prev) + 1;
-			}
-			return parseInt(prev);
-		});
+	const increaseFontSize = () => {
+		if (fontSize < 20) {
+			setFontSize((prev) => {
+				return prev + 1;
+			});
+		}
 	};
 
-	const handleFontMinusCLicked = () => {
-		setFontSize((prev) => {
-			if (parseInt(prev) > 10) {
-				return parseInt(prev) - 1;
-			}
-			return parseInt(prev);
-		});
+	const decreaseFontSize = () => {
+		if (fontSize > 10) {
+			setFontSize((prev) => {
+				return prev - 1;
+			});
+		}
 	};
 
 	return (
 		<div className={styles["font-size-counter"]}>
-			<button onClick={handleFontPlusCLicked}>+</button>
+			<button onClick={increaseFontSize}>+</button>
 			<p>{fontSize}</p>
-			<button onClick={handleFontMinusCLicked}>-</button>
+			<button onClick={decreaseFontSize}>-</button>
 		</div>
 	);
 }
