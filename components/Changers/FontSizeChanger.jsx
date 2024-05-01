@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import styles from "@/styles/components/changers/font-size-changer.module.scss";
 
 export default function FontSizeChanger({ fontSize, setFontSize }) {
