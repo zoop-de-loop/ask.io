@@ -1,0 +1,39 @@
+.toggle-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	h2 {
+		font-weight: 400;
+		font-size: 1.65rem;
+		color: var(--secondary-color);
+	}
+
+	button {
+		width: 350px;
+		height: 60px;
+		background-color: var(--secondary-color);
+		color: var(--text-color);
+		text-transform: uppercase;
+		border: none;
+		border-radius: 8px;
+		font-size: 1.35rem;
+		font-weight: 700;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.toggle-button {
+		h2 {
+			font-size: 1.25rem;
+		}
+
+		button {
+			width: 265px;
+			height: 45px;
+			font-size: 1.15rem;
+		}
+	}
+}

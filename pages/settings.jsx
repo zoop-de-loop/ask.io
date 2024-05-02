@@ -1,13 +1,12 @@
 import styles from "@/styles/pages/settings.module.scss";
-import Setter from "@/components/Setter";
-import ThemeChanger from "@/components/Changers/themeChanger";
-import FontSizeChanger from "@/components/Changers/FontSizeChanger";
+import ToggleButton from "@/components/ToggleButton";
+import CounterInput from "@/components/CounterInput";
 
-export default function Settings({ fontSize, setFontSize, theme, setTheme }) {
+export default function Settings() {
 	return (
 		<main id={styles.main}>
-			<Setter header='theme' changer={<ThemeChanger theme={theme} setTheme={setTheme} />} />
-			<Setter header='font size' changer={<FontSizeChanger fontSize={fontSize} setFontSize={setFontSize} />} />
+			<ToggleButton name='theme' value1={"bright"} value2={"dark"} />
+			<CounterInput name='font size' defaultValue={16} minValue={10} maxValue={20} />
 		</main>
 	);
 }
