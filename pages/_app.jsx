@@ -1,19 +1,11 @@
 import { useEffect, useState } from "react";
 import "@/styles/globals.scss";
+import colors from "@/server/colors";
 import Header from "@/components/Header";
 
 export default function App({ Component, pageProps }) {
 	const [theme, setTheme] = useState("bright");
 	const [fontSize, setFontSize] = useState(16);
-
-	const brightPrimary = "#EC7373";
-	const brightSecondary = "#FFFFFF";
-	const brightText = "#000000";
-	const brightInvert = "0%";
-	const darkPrimary = "#B95151";
-	const darkSecondary = "#301E1E";
-	const darkText = "#FFFFFF";
-	const darkInvert = "100%";
 
 	useEffect(() => {
 		if (localStorage.getItem("font-size")) {
@@ -30,10 +22,13 @@ export default function App({ Component, pageProps }) {
 	}, []);
 
 	useEffect(() => {
-		document.documentElement.style.setProperty("--primary-color", theme === "bright" ? brightPrimary : darkPrimary);
-		document.documentElement.style.setProperty("--secondary-color", theme === "bright" ? brightSecondary : darkSecondary);
-		document.documentElement.style.setProperty("--text-color", theme === "bright" ? brightText : darkText);
-		document.documentElement.style.setProperty("--invert", theme === "bright" ? brightInvert : darkInvert);
+		document.documentElement.style.setProperty("--primary-color", theme === "bright" ? colors.brightPrimary : colors.darkPrimary);
+		document.documentElement.style.setProperty(
+			"--secondary-color",
+			theme === "bright" ? colors.brightSecondary : colors.darkSecondary
+		);
+		document.documentElement.style.setProperty("--text-color", theme === "bright" ? colors.brightText : colors.darkText);
+		document.documentElement.style.setProperty("--invert", theme === "bright" ? colors.brightInvert : colors.darkInvert);
 	}, [theme]);
 
 	useEffect(() => {
