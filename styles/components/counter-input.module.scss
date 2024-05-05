@@ -1,50 +1,46 @@
 .input-counter {
-	div {
-		width: 60px;
-		height: 145px;
-		border-radius: 8px;
-		background-color: var(--secondary-color);
-		color: var(--text-color);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		padding-block: 10px;
-		box-sizing: border-box;
+	width: 60px;
+	height: 145px;
+	border-radius: 8px;
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding-block: 10px;
+	box-sizing: border-box;
 
-		button {
-			background-color: transparent;
-			border: none;
-			font-size: 22px;
-			font-weight: bold;
-			color: gray;
-			width: 100%;
-			padding: 5px;
-			cursor: pointer;
-		}
+	button {
+		background-color: transparent;
+		border: none;
+		font-size: 22px;
+		font-weight: bold;
+		color: gray;
+		width: 100%;
+		padding: 5px;
+		cursor: pointer;
+	}
 
-		p {
-			font-size: 1.9rem;
-			font-weight: 500;
-		}
+	p {
+		font-size: 1.9rem;
+		font-weight: 500;
 	}
 }
 
 @media only screen and (max-width: 900px) {
 	.input-counter {
-		div {
-			width: 50px;
-			height: 110px;
-			padding-block: 5px;
+		width: 50px;
+		height: 110px;
+		padding-block: 5px;
 
-			button {
-				font-size: 18px;
-				padding: 2px;
-			}
+		button {
+			font-size: 18px;
+			padding: 2px;
+		}
 
-			p {
-				font-size: 1.75rem;
-			}
+		p {
+			font-size: 1.75rem;
 		}
 	}
 }

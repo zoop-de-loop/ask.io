@@ -1,17 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import "@/styles/globals.scss";
 import colors from "@/server/colors";
 import Header from "@/components/Header";
+import PageFeatures from "@/server/context";
 
 export default function App({ Component, pageProps }) {
 	const [theme, setTheme] = useState("bright");
 	const [fontSize, setFontSize] = useState(16);
 
 	useEffect(() => {
-		if (localStorage.getItem("font-size")) {
-			setFontSize(localStorage.getItem("font-size"));
+		if (localStorage.getItem("fontSize")) {
+			setFontSize(localStorage.getItem("fontSize"));
 		} else {
-			localStorage.setItem("font-size", 16);
+			localStorage.setItem("fontSize", 16);
 		}
 
 		if (localStorage.getItem("theme")) {
@@ -35,15 +36,10 @@ export default function App({ Component, pageProps }) {
 		document.documentElement.style.setProperty("--font-size", `${parseInt(fontSize)}px`);
 	}, [fontSize]);
 
-	pageProps["theme"] = theme;
-	pageProps["setTheme"] = setTheme;
-	pageProps["fontSize"] = fontSize;
-	pageProps["setFontSize"] = setFontSize;
-
 	return (
-		<>
+		<PageFeatures.Provider value={{ theme: theme, setTheme: setTheme, fontSize: fontSize, setFontSize: setFontSize }}>
 			<Header />
 			<Component {...pageProps} />
-		</>
+		</PageFeatures.Provider>
 	);
 }

@@ -28,36 +28,6 @@
 			font-weight: 700;
 			cursor: pointer;
 		}
-
-		.font-size-counter {
-			width: 60px;
-			height: 145px;
-			border-radius: 8px;
-			background-color: var(--secondary-color);
-			color: var(--text-color);
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-			padding-block: 10px;
-			box-sizing: border-box;
-
-			button {
-				background-color: transparent;
-				border: none;
-				font-size: 22px;
-				font-weight: bold;
-				color: gray;
-				width: 100%;
-				padding: 5px;
-				cursor: pointer;
-			}
-
-			p {
-				font-size: 1.9rem;
-				font-weight: 500;
-			}
-		}
 	}
 }
 
@@ -74,21 +44,6 @@
 				width: 265px;
 				height: 45px;
 				font-size: 1.15rem;
-			}
-
-			.font-size-counter {
-				width: 50px;
-				height: 110px;
-				padding-block: 5px;
-
-				button {
-					font-size: 18px;
-					padding: 2px;
-				}
-
-				p {
-					font-size: 1.75rem;
-				}
 			}
 		}
 	}
