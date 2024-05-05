@@ -1,7 +1,7 @@
 import { useContext } from "react";
+import styles from "@/styles/components/theme-toggle-button.module.scss";
 import PageFeatures from "@/server/context";
 import ToggleButton from "@/components/ToggleButton";
-import styles from "@/styles/components/theme-toggle-button.module.scss";
 
 export default function ThemeToggleButton() {
 	const theme = useContext(PageFeatures)["theme"];

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import PageFeatures from "@/server/context";
 import styles from "@/styles/components/font-size-counter-input.module.scss";
+import PageFeatures from "@/server/context";
 import CounterInput from "@/components/CounterInput";
 export default function FontSizeCounterInput() {
 	const fontSize = parseInt(useContext(PageFeatures)["fontSize"]);

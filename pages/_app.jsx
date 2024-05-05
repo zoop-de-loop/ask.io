@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "@/styles/globals.scss";
 import colors from "@/server/colors";
-import Header from "@/components/Header";
 import PageFeatures from "@/server/context";
+import Header from "@/components/Header";
 
 export default function App({ Component, pageProps }) {
 	const [theme, setTheme] = useState("bright");
