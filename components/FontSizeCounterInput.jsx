@@ -6,7 +6,7 @@ export default function FontSizeCounterInput() {
 	const fontSize = parseInt(useContext(PageFeatures)["fontSize"]);
 	const setFontSize = useContext(PageFeatures)["setFontSize"];
 
-	const onIncrease = () => {
+	const increaseFontsize = () => {
 		if (fontSize < 20) {
 			setFontSize((prev) => {
 				const newFontSize = parseInt(prev) + 1;
@@ -16,7 +16,7 @@ export default function FontSizeCounterInput() {
 		}
 	};
 
-	const onDecrease = () => {
+	const decreaseFontSize = () => {
 		if (fontSize > 10) {
 			setFontSize((prev) => {
 				const newFontSize = parseInt(prev) - 1;
@@ -29,7 +29,7 @@ export default function FontSizeCounterInput() {
 	return (
 		<section className={styles["font-size-counter"]}>
 			<h2>font size - </h2>
-			<CounterInput onIncrease={onIncrease} onDecrease={onDecrease}>
+			<CounterInput onIncrease={increaseFontsize} onDecrease={decreaseFontSize}>
 				{fontSize}
 			</CounterInput>
 		</section>
