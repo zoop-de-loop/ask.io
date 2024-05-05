@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
 		if (localStorage.getItem("theme")) {
 			setTheme(localStorage.getItem("theme"));
 		} else {
-			setTheme("bright");
+			localStorage.setItem("theme", "bright");
 		}
 	}, []);
 
