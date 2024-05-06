@@ -1,10 +1,16 @@
-import { useContext } from "react";
-import styles from "@/styles/components/font-size-counter-input.module.scss";
-import PageFeatures from "@/server/context";
+import { useEffect, useState } from "react";
 import CounterInput from "@/components/CounterInput";
+
 export default function FontSizeCounterInput() {
-	const fontSize = parseInt(useContext(PageFeatures)["fontSize"]);
-	const setFontSize = useContext(PageFeatures)["setFontSize"];
+	const [fontSize, setFontSize] = useState(16);
+
+	useEffect(() => {
+		setFontSize(localStorage.getItem("fontSize") || 16);
+	}, []);
+
+	useEffect(() => {
+		document.documentElement.style.setProperty("--font-size", `${fontSize}px`);
+	}, [fontSize]);
 
 	const increaseFontsize = () => {
 		if (fontSize < 20) {
@@ -26,12 +32,5 @@ export default function FontSizeCounterInput() {
 		}
 	};
 
-	return (
-		<section className={styles["font-size-counter"]}>
-			<h2>font size - </h2>
-			<CounterInput onIncrease={increaseFontsize} onDecrease={decreaseFontSize}>
-				{fontSize}
-			</CounterInput>
-		</section>
-	);
+	return <CounterInput onIncrease={increaseFontsize} onDecrease={decreaseFontSize} value={fontSize} />;
 }

@@ -5,8 +5,15 @@ import FontSizeCounterInput from "@/components/FontSizeCounterInput";
 export default function Settings() {
 	return (
 		<main id={styles.main}>
-			<ThemeToggleButton />
-			<FontSizeCounterInput />
+			<section>
+				<h2>theme - </h2>
+				<ThemeToggleButton />
+			</section>
+
+			<section>
+				<h2>font size - </h2>
+				<FontSizeCounterInput />
+			</section>
 		</main>
 	);
 }

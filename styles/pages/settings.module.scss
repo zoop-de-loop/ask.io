@@ -15,19 +15,6 @@
 			font-size: 1.65rem;
 			color: var(--secondary-color);
 		}
-
-		.theme-changer {
-			width: 350px;
-			height: 60px;
-			background-color: var(--secondary-color);
-			color: var(--text-color);
-			text-transform: uppercase;
-			border: none;
-			border-radius: 8px;
-			font-size: 1.35rem;
-			font-weight: 700;
-			cursor: pointer;
-		}
 	}
 }
 
@@ -38,12 +25,6 @@
 		section {
 			h2 {
 				font-size: 1.25rem;
-			}
-
-			.theme-changer {
-				width: 265px;
-				height: 45px;
-				font-size: 1.15rem;
 			}
 		}
 	}

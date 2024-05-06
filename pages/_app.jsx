@@ -1,45 +1,38 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState, createContext } from "react";
 import "@/styles/globals.scss";
-import colors from "@/server/colors";
-import PageFeatures from "@/server/context";
+import colors from "@/utils/colors";
 import Header from "@/components/Header";
+
+export const ThemeContext = createContext(null);
 
 export default function App({ Component, pageProps }) {
 	const [theme, setTheme] = useState("bright");
-	const [fontSize, setFontSize] = useState(16);
 
 	useEffect(() => {
-		if (localStorage.getItem("fontSize")) {
-			setFontSize(localStorage.getItem("fontSize"));
-		} else {
+		if (!localStorage.getItem("fontSize")) {
 			localStorage.setItem("fontSize", 16);
 		}
 
-		if (localStorage.getItem("theme")) {
-			setTheme(localStorage.getItem("theme"));
-		} else {
+		if (!localStorage.getItem("theme")) {
 			localStorage.setItem("theme", "bright");
 		}
+
+		setTheme(localStorage.getItem("theme"));
+		document.documentElement.style.setProperty("--font-size", `${localStorage.getItem("fontSize")}px`);
 	}, []);
 
 	useEffect(() => {
-		document.documentElement.style.setProperty("--primary-color", theme === "bright" ? colors.brightPrimary : colors.darkPrimary);
-		document.documentElement.style.setProperty(
-			"--secondary-color",
-			theme === "bright" ? colors.brightSecondary : colors.darkSecondary
-		);
-		document.documentElement.style.setProperty("--text-color", theme === "bright" ? colors.brightText : colors.darkText);
-		document.documentElement.style.setProperty("--invert", theme === "bright" ? colors.brightInvert : colors.darkInvert);
+		document.documentElement.style.setProperty("--primary-color", colors[theme].primary);
+		document.documentElement.style.setProperty("--secondary-color", colors[theme].secondary);
+		document.documentElement.style.setProperty("--text-color", colors[theme].text);
+		document.documentElement.style.setProperty("--invert", colors[theme].invert);
+		document.documentElement.style.setProperty("--font-size", `${localStorage.getItem("fontSize")}px`);
 	}, [theme]);
 
-	useEffect(() => {
-		document.documentElement.style.setProperty("--font-size", `${parseInt(fontSize)}px`);
-	}, [fontSize]);
-
 	return (
-		<PageFeatures.Provider value={{ theme: theme, setTheme: setTheme, fontSize: fontSize, setFontSize: setFontSize }}>
+		<ThemeContext.Provider value={{ theme, setTheme }}>
 			<Header />
 			<Component {...pageProps} />
-		</PageFeatures.Provider>
+		</ThemeContext.Provider>
 	);
 }
