@@ -1,8 +1,8 @@
-import styles from "@/styles/components/toggle-button.module.scss";
+import styles from "@/styles/components/button.module.scss";
 
-export default function Button({ onToggle, children }) {
+export default function Button({ children, ...rest }) {
 	return (
-		<button className={styles["toggle-button"]} onClick={onToggle}>
+		<button className={styles.button} {...rest}>
 			{children}
 		</button>
 	);
