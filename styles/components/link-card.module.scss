@@ -1,33 +1,31 @@
-@use "/styles/colors";
-
 .link-card {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	width: 25%;
 	height: 100%;
-	background-color: colors.$secondary;
-	border-radius: 0.313rem;
-	padding-top: 2rem;
+	background-color: var(--secondary-color);
+	border-radius: 5px;
+	padding-top: 32px;
 	box-sizing: border-box;
 	text-decoration: none;
 
 	h2 {
 		font-weight: 400;
-		color: colors.$primary;
+		color: var(--primary-color);
 		font-size: min(2.5vw, 35px);
 	}
 
 	.circles {
-		margin-top: 2rem;
+		margin-top: 32px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		gap: 1rem;
+		gap: 16px;
 
 		.circle {
-			background-color: colors.$primary;
+			background-color: var(--primary-color);
 			aspect-ratio: 1/1;
 			border-radius: 50%;
 
@@ -55,7 +53,7 @@
 		flex-direction: row-reverse;
 		align-items: center;
 		justify-content: space-between;
-		padding-inline: min(5%, 2rem);
+		padding-inline: min(5%, 32px);
 		width: 100%;
 		height: fit-content;
 		padding-block: 10px;

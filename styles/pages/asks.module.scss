@@ -1,12 +1,10 @@
-@use "/styles/colors";
-
 .main {
 	height: 100%;
 	box-sizing: border-box;
-	padding-top: 2rem;
+	padding-top: 32px;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 32px;
 
 	.asks {
 		height: 0;
@@ -31,7 +29,7 @@
 		}
 
 		&::-webkit-scrollbar-thumb {
-			background-color: colors.$secondary;
+			background-color: var(--secondary-color);
 		}
 	}
 
@@ -39,45 +37,45 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 3rem;
+		gap: 48px;
 
 		button {
 			cursor: pointer;
-			padding: 1rem;
-			min-width: 12rem;
+			padding: 16px;
+			min-width: 192px;
 			box-sizing: border-box;
-			border-radius: 0.5rem;
-			border: solid 0.2rem colors.$secondary;
+			border-radius: 8px;
+			border: solid 3px var(--secondary-color);
 			font-size: 1.5rem;
 			font-weight: 600;
 		}
 
 		.outlined {
-			color: colors.$secondary;
-			background-color: colors.$primary;
+			color: var(--secondary-color);
+			background-color: var(--primary-color);
 		}
 
 		.filled {
-			color: colors.$primary;
-			background-color: colors.$secondary;
+			color: var(--primary-color);
+			background-color: var(--secondary-color);
 		}
 	}
 }
 
 @media only screen and (max-width: 800px) {
-	.asks-and-buttons {
-		padding: 1rem 1.5rem 1.5rem 1rem;
+	.main {
+		padding: 16px 24px 24px 16px;
 
 		.asks {
 			gap: 1.25rem;
 		}
 
 		.buttons {
-			gap: 2rem;
+			gap: 32px;
 
 			button {
-				padding: 1rem;
-				min-width: 10rem;
+				padding: 16px;
+				min-width: 160px;
 				font-size: 1rem;
 				font-weight: 600;
 			}
