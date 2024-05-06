@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "@/pages/_app";
-import ToggleButton from "@/components/ToggleButton";
+import ToggleButton from "@/components/Button";
 
-export default function ThemeToggleButton() {
+export default function ThemeButton() {
 	const { theme, setTheme } = useContext(ThemeContext);
 
 	const ToggleTheme = () => {

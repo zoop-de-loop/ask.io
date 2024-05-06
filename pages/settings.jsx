@@ -1,5 +1,5 @@
 import styles from "@/styles/pages/settings.module.scss";
-import ThemeToggleButton from "@/components/settings/ThemeToggleButton";
+import ThemeButton from "@/components/settings/ThemeButton";
 import FontSizeCounterInput from "@/components/settings/FontSizeCounterInput";
 
 export default function Settings() {
@@ -7,7 +7,7 @@ export default function Settings() {
 		<main id={styles.main}>
 			<section>
 				<h2>theme - </h2>
-				<ThemeToggleButton />
+				<ThemeButton />
 			</section>
 
 			<section>
