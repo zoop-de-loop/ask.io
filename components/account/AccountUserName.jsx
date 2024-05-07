@@ -23,7 +23,9 @@ export default function AccountUserName() {
 	return (
 		<section className={styles["account-user-name"]}>
 			{!isEditActive ? (
-				<span className={styles["user-name-view"]}>{changingUserName}</span>
+				<span className={styles["user-name-view"]} title={changingUserName}>
+					{changingUserName}
+				</span>
 			) : (
 				<input
 					type='text'

@@ -27,6 +27,9 @@
 
 	.user-name-view {
 		line-height: 3.5rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-wrap: nowrap;
 		display: inline-block;
 		padding-bottom: 3px;
 		font-family: Kanit;
