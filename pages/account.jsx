@@ -17,9 +17,9 @@ export default function Account() {
 		<main id={styles.main}>
 			<label for='profilePicInput' className={styles["profile-pic-input"]}>
 				<img src={profilePicSrc} alt="user's photo" />
+				<input type='file' id='profilePicInput' onChange={onUpload} accept='image/png, image/jpg, image/jpeg' />
 			</label>
 			<AccountUserName />
-			<input type='file' id='profilePicInput' onChange={onUpload} accept='image/png, image/jpg, image/jpeg' />
 			<p className={styles["days-alive"]}>{`Alive for ${daysAlive} days`}</p>
 		</main>
 	);
