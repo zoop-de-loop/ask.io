@@ -19,7 +19,7 @@ export default function Account() {
 				<img src={profilePicSrc} alt="user's photo" />
 				<input type='file' id='profilePicInput' onChange={onUpload} accept='image/png, image/jpg, image/jpeg' />
 			</label>
-			<AccountUserName />
+			<AccountUserName defaultUserName={"Lio Giladi"} />
 			<p className={styles["days-alive"]}>{`Alive for ${daysAlive} days`}</p>
 		</main>
 	);
