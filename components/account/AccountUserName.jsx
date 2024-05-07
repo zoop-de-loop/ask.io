@@ -18,7 +18,7 @@ export default function AccountUserName({ defaultUserName }) {
 			{!isEditActive ? (
 				<span title={userName}>{userName}</span>
 			) : (
-				<input type='text' value={userName} onChange={onUserNameChange} disabled={!isEditActive} />
+				<input type='text' value={userName} onChange={onUserNameChange} />
 			)}
 
 			<button className={styles.filled} onClick={onEditbuttonClick}>
