@@ -7,10 +7,8 @@ export default function Account() {
 	const [profilePicSrc, setProfilePicSrc] = useState("/lio_img.png");
 
 	const onUpload = (event) => {
-		try {
-			const file = event.target.files[0];
-			setProfilePicSrc(URL.createObjectURL(file));
-		} catch {}
+		const file = event.target.files[0];
+		setProfilePicSrc(URL.createObjectURL(file));
 	};
 
 	return (
