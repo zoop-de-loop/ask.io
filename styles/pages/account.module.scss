@@ -34,12 +34,17 @@
 			height: 55px;
 			position: relative;
 			background-color: transparent;
-			border: none;
 			text-align: center;
 			font-size: 3.5rem;
 			font-weight: 500;
 			color: var(--secondary-color);
-			// border-bottom: 4px var(--secondary-color) solid;
+		}
+		.user-name-input-save {
+			border: none;
+			border-bottom: 4px var(--secondary-color) solid;
+		}
+		.user-name-input-edit {
+			border: none;
 		}
 
 		button {
