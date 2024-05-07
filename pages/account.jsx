@@ -5,7 +5,7 @@ export default function Account() {
 	return (
 		<main id={styles.main}>
 			<label for='profilePicInput' className={styles["profile-pic-input"]}>
-				<img src='/lio_img.png' alt="user's photo" />{" "}
+				<img src='/lio_img.png' alt="user's photo" />
 			</label>
 
 			<input type='file' id='profilePicInput' />
