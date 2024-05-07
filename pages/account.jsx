@@ -20,7 +20,7 @@ export default function Account() {
 			</label>
 			<AccountUserName />
 			<input type='file' id='profilePicInput' onChange={onUpload} accept='image/png, image/jpg, image/jpeg' />
-			<p>{`Alive for ${daysAlive} days`}</p>
+			<p className={styles["days-alive"]}>{`Alive for ${daysAlive} days`}</p>
 		</main>
 	);
 }

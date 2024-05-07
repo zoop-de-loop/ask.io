@@ -3,6 +3,7 @@
 	position: relative;
 
 	input[type="text"] {
+		overflow: auto;
 		padding-bottom: 3px;
 		font-family: Kanit;
 		width: 275px;
@@ -22,6 +23,20 @@
 
 	.user-name-input-edit {
 		border: none;
+	}
+
+	.user-name-view {
+		line-height: 3.5rem;
+		display: inline-block;
+		padding-bottom: 3px;
+		font-family: Kanit;
+		width: 275px;
+		height: fit-content;
+		position: relative;
+		text-align: center;
+		font-size: 3.5rem;
+		font-weight: 500;
+		color: var(--secondary-color);
 	}
 
 	button {
