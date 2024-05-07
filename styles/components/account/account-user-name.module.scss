@@ -31,7 +31,6 @@
 		padding-bottom: 3px;
 		font-family: Kanit;
 		width: 275px;
-		height: fit-content;
 		position: relative;
 		text-align: center;
 		font-size: 3.5rem;
@@ -71,6 +70,13 @@
 			height: 45px;
 			font-size: 2.5rem;
 			padding-bottom: 0px;
+		}
+
+		.user-name-view {
+			line-height: 2.5rem;
+			padding-bottom: 0px;
+			width: 180px;
+			font-size: 2.5rem;
 		}
 
 		button {
