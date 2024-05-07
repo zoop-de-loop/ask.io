@@ -11,7 +11,7 @@ export default function Home() {
 			<div className={styles["page-links"]}>
 				<LinkCard name='Asks' url='/asks' icon={<AsksIcon />} />
 				<LinkCard name='Statistics' url='/statistics' icon={<StatisticsIcon />} />
-				<LinkCard name='Account' url='/account' icon={<AccountIcon />} />
+				<LinkCard name='My Profile' url='/account' icon={<AccountIcon />} />
 				<LinkCard name='Settings' url='/settings' icon={<SettingsIcon />} />
 			</div>
 		</main>
