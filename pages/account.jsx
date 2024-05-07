@@ -24,24 +24,7 @@ export default function Account() {
 	const onUpload = (event) => {
 		try {
 			const file = event.target.files[0];
-
-			let isImage = false;
-			switch (file["type"]) {
-				case "image/jpeg":
-					isImage = true;
-					break;
-				case "image/png":
-					isImage = true;
-					break;
-				case "image/jpg":
-					isImage = true;
-					break;
-				default:
-					isImage = false;
-					break;
-			}
-
-			isImage ? setProfilePicSrc(URL.createObjectURL(file)) : alert("file not supported");
+			setProfilePicSrc(URL.createObjectURL(file));
 		} catch {}
 	};
 
@@ -51,7 +34,7 @@ export default function Account() {
 				<img src={profilePicSrc} alt="user's photo" />
 			</label>
 
-			<input type='file' id='profilePicInput' onChange={onUpload} />
+			<input type='file' id='profilePicInput' onChange={onUpload} accept='image/png, image/jpg, image/jpeg' />
 
 			<section>
 				<input
