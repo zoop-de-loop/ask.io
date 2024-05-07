@@ -16,17 +16,9 @@ export default function AccountUserName({ defaultUserName }) {
 	return (
 		<section className={styles["account-user-name"]}>
 			{!isEditActive ? (
-				<span className={styles["user-name-view"]} title={userName}>
-					{userName}
-				</span>
+				<span title={userName}>{userName}</span>
 			) : (
-				<input
-					type='text'
-					value={userName}
-					onChange={onUserNameChange}
-					className={styles[`user-name-input-${isEditActive ? "save" : "edit"}`]}
-					disabled={!isEditActive}
-				/>
+				<input type='text' value={userName} onChange={onUserNameChange} disabled={!isEditActive} />
 			)}
 
 			<button className={styles.filled} onClick={onEditbuttonClick}>

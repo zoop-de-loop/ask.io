@@ -2,43 +2,29 @@
 	margin-bottom: 20px;
 	position: relative;
 
-	input[type="text"] {
-		overflow: auto;
-		padding-bottom: 3px;
+	input[type="text"],
+	span {
 		font-family: Kanit;
 		width: 275px;
-		height: 55px;
-		position: relative;
-		background-color: transparent;
 		text-align: center;
 		font-size: 3.5rem;
 		font-weight: 500;
 		color: var(--secondary-color);
 	}
 
-	.user-name-input-save {
+	input[type="text"] {
+		height: 55px;
+		background-color: transparent;
 		border: none;
 		border-bottom: 4px var(--secondary-color) solid;
 	}
 
-	.user-name-input-edit {
-		border: none;
-	}
-
-	.user-name-view {
+	span {
 		line-height: 3.5rem;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		text-wrap: nowrap;
 		display: inline-block;
-		padding-bottom: 3px;
-		font-family: Kanit;
-		width: 275px;
-		position: relative;
-		text-align: center;
-		font-size: 3.5rem;
-		font-weight: 500;
-		color: var(--secondary-color);
 	}
 
 	button {
@@ -68,18 +54,18 @@
 		justify-content: center;
 		gap: 25px;
 
-		input[type="text"] {
+		input[type="text"],
+		span {
 			width: 180px;
-			height: 45px;
 			font-size: 2.5rem;
-			padding-bottom: 0px;
 		}
 
-		.user-name-view {
+		input[type="text"] {
+			height: 45px;
+		}
+
+		span {
 			line-height: 2.5rem;
-			padding-bottom: 0px;
-			width: 180px;
-			font-size: 2.5rem;
 		}
 
 		button {
