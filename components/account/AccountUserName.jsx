@@ -6,9 +6,7 @@ export default function AccountUserName({ defaultUserName }) {
 	const [userName, setUserName] = useState(defaultUserName);
 
 	const onEditbuttonClick = () => {
-		setIsEditActive((prev) => {
-			return !prev;
-		});
+		setIsEditActive((prev) => !prev);
 	};
 
 	const onUserNameChange = (event) => {
