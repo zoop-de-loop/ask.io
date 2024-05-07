@@ -23,48 +23,6 @@
 		display: none;
 	}
 
-	section {
-		margin-bottom: 20px;
-		position: relative;
-
-		input[type="text"] {
-			padding-bottom: 3px;
-			font-family: Kanit;
-			width: 275px;
-			height: 55px;
-			position: relative;
-			background-color: transparent;
-			text-align: center;
-			font-size: 3.5rem;
-			font-weight: 500;
-			color: var(--secondary-color);
-		}
-		.user-name-input-save {
-			border: none;
-			border-bottom: 4px var(--secondary-color) solid;
-		}
-		.user-name-input-edit {
-			border: none;
-		}
-
-		button {
-			font-family: Kanit;
-			position: absolute;
-			right: -150px;
-			cursor: pointer;
-			width: 125px;
-			height: 50px;
-			text-align: center;
-			box-sizing: border-box;
-			border-radius: 8px;
-			border: solid 3px var(--secondary-color);
-			background-color: var(--secondary-color);
-			color: var(--primary-color);
-			font-size: 1.5rem;
-			font-weight: 500;
-		}
-	}
-
 	p {
 		font-size: 2rem;
 		color: var(--secondary-color);
@@ -78,30 +36,6 @@
 		.profile-pic-input {
 			margin-bottom: 30px;
 			width: 175px;
-		}
-
-		section {
-			margin-bottom: 20px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			gap: 25px;
-
-			input[type="text"] {
-				width: 180px;
-				height: 45px;
-				font-size: 2.5rem;
-				padding-bottom: 0px;
-			}
-
-			button {
-				right: 0;
-				position: relative;
-				width: 125px;
-				height: 50px;
-				font-size: 1.5rem;
-			}
 		}
 
 		p {
