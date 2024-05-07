@@ -2,27 +2,19 @@ import { useState } from "react";
 import styles from "@/styles/components/account/account-user-name.module.scss";
 
 export default function AccountUserName({ defaultUserName }) {
-	const [isEditActive, setIsEditActive] = useState(false);
+	const [isEditing, setIsEditing] = useState(false);
 	const [userName, setUserName] = useState(defaultUserName);
-
-	const onEditbuttonClick = () => {
-		setIsEditActive((prev) => !prev);
-	};
-
-	const onUserNameChange = (event) => {
-		setUserName(event.target.value);
-	};
 
 	return (
 		<section className={styles["account-user-name"]}>
-			{!isEditActive ? (
-				<span title={userName}>{userName}</span>
+			{isEditing ? (
+				<input type='text' value={userName} onChange={(event) => setUserName(event.target.value)} />
 			) : (
-				<input type='text' value={userName} onChange={onUserNameChange} />
+				<span title={userName}>{userName}</span>
 			)}
 
-			<button className={styles.filled} onClick={onEditbuttonClick}>
-				{isEditActive ? "Save" : "Edit"}
+			<button className={styles.filled} onClick={() => setIsEditing((prev) => !prev)}>
+				{isEditing ? "Save" : "Edit"}
 			</button>
 		</section>
 	);
