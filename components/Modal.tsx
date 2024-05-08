@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import styles from "../styles/components/modal.module.scss";
 
 interface Props {
-	children?: JSX.Element|JSX.Element[];
+	children?: React.ReactElement;
 	isOpen: any;
 	setIsOpen: any;
   }
