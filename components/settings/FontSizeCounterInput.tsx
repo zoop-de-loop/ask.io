@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import CounterInput from "@/components/CounterInput";
+import CounterInput from "../CounterInput";
 
 export default function FontSizeCounterInput() {
 	const [fontSize, setFontSize] = useState(16);
 
 	useEffect(() => {
-		setFontSize(parseInt(localStorage.getItem("fontSize")) || 16);
+		setFontSize(parseInt(JSON.parse(localStorage.getItem("fontSize"))) || 16);
 	}, []);
 
 	useEffect(() => {
@@ -15,8 +15,8 @@ export default function FontSizeCounterInput() {
 	const increaseFontsize = () => {
 		if (fontSize < 20) {
 			setFontSize((prev) => {
-				const newFontSize = prev + 1;
-				localStorage.setItem("fontSize", newFontSize);
+				const newFontSize:number = prev + 1;
+				localStorage.setItem("fontSize", newFontSize.toString());
 				return newFontSize;
 			});
 		}
@@ -25,8 +25,8 @@ export default function FontSizeCounterInput() {
 	const decreaseFontSize = () => {
 		if (fontSize > 10) {
 			setFontSize((prev) => {
-				const newFontSize = prev - 1;
-				localStorage.setItem("fontSize", newFontSize);
+				const newFontSize:number = prev - 1;
+				localStorage.setItem("fontSize", (newFontSize).toString());
 				return newFontSize;
 			});
 		}

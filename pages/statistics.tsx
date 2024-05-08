@@ -1,5 +1,5 @@
-import styles from "@/styles/pages/statistics.module.scss";
-import Stat from "@/components/Stat";
+import styles from "../styles/pages/statistics.module.scss";
+import Stat from "../components/Stat";
 
 const data = [
 	{ id: 0, amount: 19, name: "all asks" },
@@ -16,7 +16,7 @@ export default function Statistics() {
 
 	return (
 		<main>
-			<div className={styles.stats}>{stats}</div>
+			<div className={styles["stats"]}>{stats}</div>
 		</main>
 	);
 }

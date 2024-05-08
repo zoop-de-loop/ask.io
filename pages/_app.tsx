@@ -1,7 +1,8 @@
 import { useEffect, useState, createContext } from "react";
-import "@/styles/globals.scss";
-import colors from "@/utils/colors";
-import Header from "@/components/Header";
+import "../styles/globals.scss";
+import colors from "../utils/colors";
+// @/utils/colors
+import Header from "../components/Header";
 
 export const ThemeContext = createContext(null);
 
@@ -10,7 +11,7 @@ export default function App({ Component, pageProps }) {
 
 	useEffect(() => {
 		if (!localStorage.getItem("fontSize")) {
-			localStorage.setItem("fontSize", 16);
+			localStorage.setItem("fontSize", "16");
 		}
 
 		if (!localStorage.getItem("theme")) {

@@ -1,9 +1,9 @@
 import { useState, useMemo } from "react";
-import styles from "@/styles/pages/asks.module.scss";
-import content from "@/server/asks";
-import Ask from "@/components/Ask";
-import CreateAskForm from "@/components/CreateAskForm";
-import Modal from "@/components/Modal";
+import styles from "../styles/pages/asks.module.scss";
+import content from "../server/asks";
+import Ask from "../components/Ask";
+import CreateAskForm from "../components/CreateAskForm";
+import Modal from "../components/Modal";
 
 export default function Asks() {
 	const [showOnlyLikedAsks, setShowOnlyLikedAsks] = useState(false);
@@ -19,9 +19,10 @@ export default function Asks() {
 
 	const askElements = useMemo(() => {
 		return Object.entries(content).reduce((acc, [id, ask]) => {
-			if (!showOnlyLikedAsks || (showOnlyLikedAsks && ask.isLiked)) {
+			if (!showOnlyLikedAsks || (showOnlyLikedAsks && ask["isLiked"])) {
 				acc.push(
-					<Ask key={id} id={id} content={ask.content} isLiked={ask.isLiked} isAnonymous={ask.isAnonymous} userId={ask.userId} />
+					<Ask key={id} id={id} content={ask["content"]} isLiked={ask["isLiked"]} isAnonymous={ask["isAnonymous"]} userId={ask["userId"]} />
+
 				);
 			}
 
@@ -30,13 +31,13 @@ export default function Asks() {
 	}, [showOnlyLikedAsks]);
 
 	return (
-		<main className={styles.main}>
-			<div className={styles.asks}>{askElements}</div>
-			<div className={styles.buttons}>
-				<button className={styles.outlined} onClick={toggleLike}>
+		<main className={styles["main"]}>
+			<div className={styles["asks"]}>{askElements}</div>
+			<div className={styles["buttons"]}>
+				<button className={styles["outlined"]} onClick={toggleLike}>
 					{showOnlyLikedAsks ? "Show All Asks" : "Show liked Asks"}
 				</button>
-				<button className={styles.filled} onClick={handleAskClick}>
+				<button className={styles["filled"]} onClick={handleAskClick}>
 					Ask
 				</button>
 			</div>

@@ -1,4 +1,4 @@
-import styles from "@/styles/components/counter-input.module.scss";
+import styles from "../styles/components/counter-input.module.scss";
 
 export default function CounterInput({ onIncrease, onDecrease, value }) {
 	return (

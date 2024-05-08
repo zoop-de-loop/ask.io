@@ -1,13 +1,13 @@
-import styles from "@/styles/pages/home.module.scss";
-import AsksIcon from "@/components/icons/AsksIcon";
-import StatisticsIcon from "@/components/icons/StatisticsIcon";
-import AccountIcon from "@/components/icons/AccountIcon";
-import SettingsIcon from "@/components/icons/SettingsIcon";
-import LinkCard from "@/components/LinkCard";
+import styles from "../styles/pages/home.module.scss";
+import AsksIcon from "../components/Icons/AsksIcon";
+import StatisticsIcon from "../components/Icons/StatisticsIcon";
+import AccountIcon from "../components/Icons/AccountIcon";
+import SettingsIcon from "../components/Icons/SettingsIcon";
+import LinkCard from "../components/LinkCard";
 
 export default function Home() {
 	return (
-		<main className={styles.main}>
+		<main className={styles["main"]}>
 			<div className={styles["page-links"]}>
 				<LinkCard name='Asks' url='/asks' icon={<AsksIcon />} />
 				<LinkCard name='Statistics' url='/statistics' icon={<StatisticsIcon />} />
