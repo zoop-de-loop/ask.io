@@ -1,0 +1,79 @@
+.account-user-name {
+	margin-bottom: 20px;
+	position: relative;
+
+	input[type="text"],
+	span {
+		font-family: Kanit;
+		width: 275px;
+		text-align: center;
+		font-size: 3.5rem;
+		font-weight: 500;
+		color: var(--secondary-color);
+	}
+
+	input[type="text"] {
+		height: 55px;
+		background-color: transparent;
+		border: none;
+		border-bottom: 4px var(--secondary-color) solid;
+	}
+
+	span {
+		line-height: 3.5rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-wrap: nowrap;
+		display: inline-block;
+	}
+
+	button {
+		font-family: Kanit;
+		position: absolute;
+		right: -150px;
+		cursor: pointer;
+		width: 125px;
+		height: 50px;
+		text-align: center;
+		box-sizing: border-box;
+		border-radius: 8px;
+		border: solid 3px var(--secondary-color);
+		background-color: var(--secondary-color);
+		color: var(--primary-color);
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.account-user-name {
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+
+		input[type="text"],
+		span {
+			width: 180px;
+			font-size: 2.5rem;
+		}
+
+		input[type="text"] {
+			height: 45px;
+		}
+
+		span {
+			line-height: 2.5rem;
+		}
+
+		button {
+			right: 0;
+			position: relative;
+			width: 125px;
+			height: 50px;
+			font-size: 1.5rem;
+		}
+	}
+}

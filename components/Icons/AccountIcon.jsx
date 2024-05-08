@@ -1,4 +1,4 @@
-export default function MyProfileIcon() {
+export default function AccountIcon() {
 	return (
 		<svg viewBox='0 0 124 124' fill='none'>
 			<rect fill='url(#pattern1)' />
