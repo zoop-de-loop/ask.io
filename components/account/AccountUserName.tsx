@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from '../../styles/components/account/account-user-name.module.scss'
 
-export default function AccountUserName({ defaultUserName }) {
+export default function AccountUserName({ defaultUserName}: {defaultUserName :string}) {
 	const [isEditing, setIsEditing] = useState(false);
 	const [userName, setUserName] = useState(defaultUserName);
 

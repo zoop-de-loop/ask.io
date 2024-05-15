@@ -6,9 +6,17 @@ export default function Account() {
 	const daysAlive = 9;
 	const [profilePicSrc, setProfilePicSrc] = useState("/lio_img.png");
 
-	const onUpload = (event) => {
-		const file = event.target.files[0];
-		setProfilePicSrc(URL.createObjectURL(file));
+	const onUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+		try{
+			if(event.target.files){
+			const file = event.target.files[0];
+			setProfilePicSrc(URL.createObjectURL(file));
+		}else{
+			console.log("no files detected");
+		}}
+		catch {
+			console.log("did not select file");
+		}
 	};
 
 	return (

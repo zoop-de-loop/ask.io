@@ -1,14 +1,13 @@
 import { useState } from "react";
 import styles from "../styles/components/ask.module.scss";
-import asks from  "../server/asks" ;
-//  /server/asks"
+import asks from  "../server/asks";
 import users from "../server/users";
 
-export default function Ask({ id, content, isLiked, isAnonymous, userId }) {
+export default function Ask({ id, content, isLiked, isAnonymous, userId } : {id:number, content:string, isLiked:boolean, isAnonymous:boolean, userId:string}) {
 	const [isCurrentlyLiked, setIsCurrentlyLiked] = useState(isLiked);
 
 	const toggleLike = () => {
-		setIsCurrentlyLiked((prev) => {
+		setIsCurrentlyLiked((prev:boolean) => {
 			asks[id].isLiked = !prev;
 			return !prev;
 		});

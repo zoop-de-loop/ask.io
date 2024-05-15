@@ -1,4 +1,13 @@
-const colors = {
+interface Colors{
+	"primary":string,
+	"secondary":string,
+	"text":string,
+	"invert":string,
+}
+
+type Themes= "bright" | "dark";
+
+const colors:Record<Themes, Colors> = {
 	bright: {
 		primary: "#EC7373",
 		secondary: "#FFFFFF",

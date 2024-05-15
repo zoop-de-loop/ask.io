@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect, ReactHTMLElement, ReactElement } from "react";
 import styles from "../styles/components/modal.module.scss";
 
 interface Props {
@@ -8,21 +8,24 @@ interface Props {
   }
 
 const Modal : React.FC<Props>  = ({ children, isOpen, setIsOpen }:Props) => {
-	const ref = useRef(null);
+	const ref = useRef<HTMLDialogElement>(null);
 
 	useEffect(() => {
 		if (isOpen) {
-			ref.current.showModal();
+			if(ref.current){
+				ref.current.showModal();
+			}
 		}
+
 	}, [isOpen]);
 
-	const handleBackgroundClicked = (event) => {
+	const handleBackgroundClicked = (event: React.MouseEvent) => {
 		if (event.target === ref.current) {
 			setIsOpen(false);
 		}
 	};
 
-	const handleButtonClicked = (event) => {
+	const handleButtonClicked = (event: React.KeyboardEvent) => {
 		if (event.key === "Escape") {
 			setIsOpen(false);
 		}

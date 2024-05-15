@@ -5,7 +5,7 @@ export default function FontSizeCounterInput() {
 	const [fontSize, setFontSize] = useState(16);
 
 	useEffect(() => {
-		setFontSize(parseInt(JSON.parse(localStorage.getItem("fontSize"))) || 16);
+		setFontSize(parseInt(localStorage.getItem("fontSize") || '16') || 16);
 	}, []);
 
 	useEffect(() => {
