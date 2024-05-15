@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, ReactHTMLElement, ReactElement } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "../styles/components/modal.module.scss";
 
 interface Props {
