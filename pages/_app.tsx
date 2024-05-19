@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import type { AppProps } from 'next/app'
 
 type Theme= "bright" | "dark";
+
 type ThemeContextType = {
 	theme?:Theme,
 	setTheme?: React.Dispatch<React.SetStateAction<Theme>>
