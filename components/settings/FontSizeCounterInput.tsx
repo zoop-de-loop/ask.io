@@ -17,7 +17,7 @@ export default function FontSizeCounterInput() {
 	const increaseFontsize = () => {
 		if (fontSize < 20) {
 			setFontSize((prev) => {
-				const newFontSize:number = prev + 1;
+				const newFontSize = prev + 1;
 				localStorage.setItem("fontSize", newFontSize.toString());
 				return newFontSize;
 			});
@@ -27,8 +27,8 @@ export default function FontSizeCounterInput() {
 	const decreaseFontSize = () => {
 		if (fontSize > 10) {
 			setFontSize((prev) => {
-				const newFontSize:number = prev - 1;
-				localStorage.setItem("fontSize", (newFontSize).toString());
+				const newFontSize = prev - 1;
+				localStorage.setItem("fontSize", newFontSize.toString());
 				return newFontSize;
 			});
 		}
