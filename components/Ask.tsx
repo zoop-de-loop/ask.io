@@ -7,7 +7,7 @@ export default function Ask({ id, content, isLiked, isAnonymous, userId } : {id:
 	const [isCurrentlyLiked, setIsCurrentlyLiked] = useState(isLiked);
 
 	const toggleLike = () => {
-		setIsCurrentlyLiked((prev:boolean) => {
+		setIsCurrentlyLiked((prev) => {
 			asks[id].isLiked = !prev;
 			return !prev;
 		});
