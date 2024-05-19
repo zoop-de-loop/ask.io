@@ -5,9 +5,9 @@ interface Colors{
 	"invert":string,
 }
 
-type Themes= "bright" | "dark";
+type Theme= "bright" | "dark";
 
-const colors:Record<Themes, Colors> = {
+const colors:Record<Theme, Colors> = {
 	bright: {
 		primary: "#EC7373",
 		secondary: "#FFFFFF",

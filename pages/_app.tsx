@@ -4,16 +4,16 @@ import colors from "../utils/colors";
 import Header from "../components/Header";
 import type { AppProps } from 'next/app'
 
-type Themes= "bright" | "dark";
+type Theme= "bright" | "dark";
 type ThemeContextType = {
-	theme?:Themes,
-	setTheme?: React.Dispatch<React.SetStateAction<Themes>>
+	theme?:Theme,
+	setTheme?: React.Dispatch<React.SetStateAction<Theme>>
 };
 
 export const ThemeContext = createContext<ThemeContextType>({});
 
 export default function App({ Component, pageProps }: AppProps) {
-	const [theme, setTheme]= useState<Themes>("bright");
+	const [theme, setTheme]= useState<Theme>("bright");
 
 	useEffect(() => {
 		if (!localStorage.getItem("fontSize")) {
@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			localStorage.setItem("theme", "bright");
 		}
 
-		setTheme(localStorage.getItem("theme") as Themes);
+		setTheme(localStorage.getItem("theme") as Theme);
 		document.documentElement.style.setProperty("--font-size", `${localStorage.getItem("fontSize")}px`);
 	}, []);
 
