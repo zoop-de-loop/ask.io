@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import CounterInput from "../CounterInput";
 
+
+
 export default function FontSizeCounterInput() {
 	const [fontSize, setFontSize] = useState(16);
 

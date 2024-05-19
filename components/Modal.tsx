@@ -1,13 +1,12 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, PropsWithChildren } from "react";
 import styles from "../styles/components/modal.module.scss";
 
 interface Props {
-	children?: React.ReactElement;
-	isOpen: any;
-	setIsOpen: any;
+	isOpen: boolean;
+	setIsOpen?: React.Dispatch<React.SetStateAction<boolean | null>>;
   }
 
-const Modal : React.FC<Props>  = ({ children, isOpen, setIsOpen }:Props) => {
+const Modal = ({ children, isOpen, setIsOpen }:PropsWithChildren<Props>) => {
 	const ref = useRef<HTMLDialogElement>(null);
 
 	useEffect(() => {
@@ -21,13 +20,17 @@ const Modal : React.FC<Props>  = ({ children, isOpen, setIsOpen }:Props) => {
 
 	const handleBackgroundClicked = (event: React.MouseEvent) => {
 		if (event.target === ref.current) {
-			setIsOpen(false);
+			if(setIsOpen){
+				setIsOpen(false)
+			};
 		}
 	};
 
 	const handleButtonClicked = (event: React.KeyboardEvent) => {
 		if (event.key === "Escape") {
-			setIsOpen(false);
+			if(setIsOpen){
+				setIsOpen(false)
+			};
 		}
 	};
 
