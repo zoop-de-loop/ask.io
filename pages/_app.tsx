@@ -10,7 +10,7 @@ type ThemeContextType = {
 	setTheme?: React.Dispatch<React.SetStateAction<Theme>>
 };
 
-export const ThemeContext = createContext<ThemeContextType>({});
+export const ThemeContext = createContext<ThemeContextType>({theme:"bright", setTheme:undefined});
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [theme, setTheme]= useState<Theme>("bright");
