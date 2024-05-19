@@ -5,10 +5,15 @@ import Header from "../components/Header";
 import type { AppProps } from 'next/app'
 
 type Themes= "bright" | "dark";
-export const ThemeContext = createContext({});
+type ThemeContextType = {
+	theme?:Themes,
+	setTheme?: React.Dispatch<React.SetStateAction<Themes>>
+};
+
+export const ThemeContext = createContext<ThemeContextType>({});
 
 export default function App({ Component, pageProps }: AppProps) {
-	const [theme, setTheme] = useState<Themes>("bright");
+	const [theme, setTheme]= useState<Themes>("bright");
 
 	useEffect(() => {
 		if (!localStorage.getItem("fontSize")) {
