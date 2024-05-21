@@ -19,15 +19,15 @@ export default function Asks() {
 
 	const askElements = useMemo(() => {
 		return Object.entries(content).reduce((acc: ReactElement[], [id, ask]) => {
-			if (!showOnlyLikedAsks || (showOnlyLikedAsks && ask["isLiked"])) {
+			if (!showOnlyLikedAsks || (showOnlyLikedAsks && ask.isLiked)) {
 				acc.push(
 					<Ask
 						key={parseInt(id)}
 						id={parseInt(id)}
-						content={ask["content"]}
-						isLiked={ask["isLiked"]}
-						isAnonymous={ask["isAnonymous"]}
-						userId={ask["userId"]}
+						content={ask.content}
+						isLiked={ask.isLiked}
+						isAnonymous={ask.isAnonymous}
+						userId={ask.userId}
 					/>
 				);
 			}
