@@ -1,6 +1,6 @@
 import { useEffect, useState, createContext } from "react";
 import "../styles/globals.scss";
-import themeCSSVariables from "../utils/themeCSSVariables";
+import THEME_CSS_VARIABLES from "../utils/themeCSSVariables";
 import Header from "../components/Header";
 import type { AppProps } from "next/app";
 
@@ -30,10 +30,10 @@ export default function App({ Component, pageProps }: AppProps) {
 	}, []);
 
 	useEffect(() => {
-		document.documentElement.style.setProperty("--primary-color", themeCSSVariables[theme].primary);
-		document.documentElement.style.setProperty("--secondary-color", themeCSSVariables[theme].secondary);
-		document.documentElement.style.setProperty("--text-color", themeCSSVariables[theme].text);
-		document.documentElement.style.setProperty("--invert", themeCSSVariables[theme].invert);
+		document.documentElement.style.setProperty("--primary-color", THEME_CSS_VARIABLES[theme].primary);
+		document.documentElement.style.setProperty("--secondary-color", THEME_CSS_VARIABLES[theme].secondary);
+		document.documentElement.style.setProperty("--text-color", THEME_CSS_VARIABLES[theme].text);
+		document.documentElement.style.setProperty("--invert", THEME_CSS_VARIABLES[theme].invert);
 		document.documentElement.style.setProperty("--font-size", `${localStorage.getItem("fontSize")}px`);
 	}, [theme]);
 

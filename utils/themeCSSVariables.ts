@@ -3,7 +3,7 @@ import { Theme } from "../pages/_app";
 type ThemeCSSVariableName = "primary" | "secondary" | "text" | "invert";
 type ThemeCSSVariables = { [key in ThemeCSSVariableName]: string };
 
-const themeCSSVariables: Record<Theme, ThemeCSSVariables> = {
+const THEME_CSS_VARIABLES: Record<Theme, ThemeCSSVariables> = Object.freeze({
 	bright: {
 		primary: "#EC7373",
 		secondary: "#FFFFFF",
@@ -17,6 +17,6 @@ const themeCSSVariables: Record<Theme, ThemeCSSVariables> = {
 		text: "#FFFFFF",
 		invert: "100%",
 	},
-};
+});
 
-export default themeCSSVariables;
+export default THEME_CSS_VARIABLES;
