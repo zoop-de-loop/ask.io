@@ -16,7 +16,7 @@ export default function Account() {
 	};
 
 	return (
-		<main id={styles["main"]}>
+		<main id={styles.main}>
 			<label htmlFor='profilePicInput' className={styles["profile-pic-input"]}>
 				<img src={profilePicSrc} alt="user's photo" />
 				<input type='file' id='profilePicInput' onChange={onUpload} accept='image/png, image/jpg, image/jpeg' />
