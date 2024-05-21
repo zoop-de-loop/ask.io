@@ -1,9 +1,9 @@
 import { Theme } from "../pages/_app";
 
-type themeCSSVariableName = "primary" | "secondary" | "text" | "invert";
-type themeCSSVariables = { [key in themeCSSVariableName]: string };
+type ThemeCSSVariableName = "primary" | "secondary" | "text" | "invert";
+type ThemeCSSVariables = { [key in ThemeCSSVariableName]: string };
 
-const colors: Record<Theme, themeCSSVariables> = {
+const themeCSSVariables: Record<Theme, ThemeCSSVariables> = {
 	bright: {
 		primary: "#EC7373",
 		secondary: "#FFFFFF",
@@ -19,4 +19,4 @@ const colors: Record<Theme, themeCSSVariables> = {
 	},
 };
 
-export default colors;
+export default themeCSSVariables;
