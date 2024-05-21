@@ -3,7 +3,7 @@ import styles from "../styles/components/modal.module.scss";
 
 interface Props {
 	isOpen: boolean;
-	setIsOpen?: React.Dispatch<React.SetStateAction<boolean | null>>;
+	setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Modal = ({ children, isOpen, setIsOpen }: PropsWithChildren<Props>) => {

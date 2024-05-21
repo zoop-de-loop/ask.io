@@ -6,20 +6,17 @@ import CreateAskForm from "../components/CreateAskForm";
 import Modal from "../components/Modal";
 
 interface AskContent {
-	content: string,
-	isLiked: boolean,
-	isAnonymous: boolean,
-	userId: string
+	content: string;
+	isLiked: boolean;
+	isAnonymous: boolean;
+	userId: string;
 }
 
-
-const contentWithTypes: Record<number, AskContent> = content; 
+const contentWithTypes: Record<number, AskContent> = content;
 
 export default function Asks() {
 	const [showOnlyLikedAsks, setShowOnlyLikedAsks] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
-
-	
 
 	const handleAskClick = () => {
 		setIsModalOpen((prev) => !prev);
@@ -30,11 +27,17 @@ export default function Asks() {
 	};
 
 	const askElements = useMemo(() => {
-		return Object.entries(contentWithTypes).reduce((acc:ReactElement[], [id, ask]) => {
+		return Object.entries(contentWithTypes).reduce((acc: ReactElement[], [id, ask]) => {
 			if (!showOnlyLikedAsks || (showOnlyLikedAsks && ask["isLiked"])) {
 				acc.push(
-					<Ask key={parseInt(id)} id={parseInt(id)} content={ask["content"]} isLiked={ask["isLiked"]} isAnonymous={ask["isAnonymous"]} userId={ask["userId"]} />
-
+					<Ask
+						key={parseInt(id)}
+						id={parseInt(id)}
+						content={ask["content"]}
+						isLiked={ask["isLiked"]}
+						isAnonymous={ask["isAnonymous"]}
+						userId={ask["userId"]}
+					/>
 				);
 			}
 
