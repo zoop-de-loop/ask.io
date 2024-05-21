@@ -1,8 +1,8 @@
-interface Asks{
-	content:string,
-	isLiked:boolean,
-	isAnonymous:boolean,
-	userId:string
+interface Asks {
+	content: string;
+	isLiked: boolean;
+	isAnonymous: boolean;
+	userId: string;
 }
 
 const asks: Record<number, Asks> = {
