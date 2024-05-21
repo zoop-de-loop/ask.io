@@ -7,15 +7,11 @@ export default function Account() {
 	const [profilePicSrc, setProfilePicSrc] = useState("/lio_img.png");
 
 	const onUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-		try{
-			if(event.target.files){
+		if (event.target.files && event.target.files[0]) {
 			const file = event.target.files[0];
 			setProfilePicSrc(URL.createObjectURL(file));
-		}else{
-			console.log("no files detected");
-		}}
-		catch {
-			console.log("did not select file");
+		} else {
+			alert("no files detected");
 		}
 	};
 
