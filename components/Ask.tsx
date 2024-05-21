@@ -3,19 +3,15 @@ import styles from "../styles/components/ask.module.scss";
 import asks from "../server/asks";
 import users from "../server/users";
 
-export default function Ask({
-	id,
-	content,
-	isLiked,
-	isAnonymous,
-	userId,
-}: {
+type Props = {
 	id: number;
 	content: string;
 	isLiked: boolean;
 	isAnonymous: boolean;
 	userId: string;
-}) {
+};
+
+export default function Ask({ id, content, isLiked, isAnonymous, userId }: Props) {
 	const [isCurrentlyLiked, setIsCurrentlyLiked] = useState(isLiked);
 
 	const toggleLike = () => {

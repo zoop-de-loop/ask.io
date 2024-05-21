@@ -1,6 +1,7 @@
 import styles from "../styles/components/stat.module.scss";
 
-export default function Stat({ amount, name }: { amount: number; name: string }) {
+type Props = { amount: number; name: string };
+export default function Stat({ amount, name }: Props) {
 	return (
 		<article className={styles.stat}>
 			<p>{amount}</p>

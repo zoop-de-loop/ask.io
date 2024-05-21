@@ -1,13 +1,12 @@
 import styles from "../styles/components/account-info.module.scss";
-export default function AccountInfo({
-	profilePictureSrc,
-	fullName,
-	daysSinceRegistration,
-}: {
+
+type Props = {
 	profilePictureSrc: string;
 	fullName: string;
 	daysSinceRegistration: number;
-}) {
+};
+
+export default function AccountInfo({ profilePictureSrc, fullName, daysSinceRegistration }: Props) {
 	return (
 		<div id={styles["account-info"]}>
 			<img src={profilePictureSrc} alt='profile-pic' />

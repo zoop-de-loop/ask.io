@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, PropsWithChildren } from "react";
 import styles from "../styles/components/modal.module.scss";
 
-interface Props {
+type Props = {
 	isOpen: boolean;
 	setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 export default function Modal({ children, isOpen, setIsOpen }: PropsWithChildren<Props>) {
 	const ref = useRef<HTMLDialogElement>(null);
