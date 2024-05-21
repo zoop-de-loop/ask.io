@@ -23,7 +23,7 @@ const Modal = ({ children, isOpen, setIsOpen }: PropsWithChildren<Props>) => {
 		}
 	};
 
-	const handleButtonClicked = (event: React.KeyboardEvent) => {
+	const handleKeyDown = (event: React.KeyboardEvent) => {
 		if (event.key === "Escape") {
 			if (setIsOpen) {
 				setIsOpen(false);
@@ -34,7 +34,7 @@ const Modal = ({ children, isOpen, setIsOpen }: PropsWithChildren<Props>) => {
 	if (!isOpen) return;
 
 	return (
-		<dialog ref={ref} className={styles["modal"]} onClick={handleBackgroundClicked} onKeyDown={handleButtonClicked}>
+		<dialog ref={ref} className={styles["modal"]} onClick={handleBackgroundClicked} onKeyDown={handleKeyDown}>
 			{children}
 		</dialog>
 	);
