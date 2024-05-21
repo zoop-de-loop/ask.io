@@ -1,13 +1,13 @@
-interface Colors{
-	"primary":string,
-	"secondary":string,
-	"text":string,
-	"invert":string,
+import { Theme } from "../pages/_app";
+
+interface Colors {
+	primary: string;
+	secondary: string;
+	text: string;
+	invert: string;
 }
 
-type Theme= "bright" | "dark";
-
-const colors:Record<Theme, Colors> = {
+const colors: Record<Theme, Colors> = {
 	bright: {
 		primary: "#EC7373",
 		secondary: "#FFFFFF",

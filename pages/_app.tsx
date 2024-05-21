@@ -2,19 +2,19 @@ import { useEffect, useState, createContext } from "react";
 import "../styles/globals.scss";
 import colors from "../utils/colors";
 import Header from "../components/Header";
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 
-type Theme= "bright" | "dark";
+export type Theme = "bright" | "dark";
 
 type ThemeContextType = {
-	theme?:Theme,
-	setTheme?: React.Dispatch<React.SetStateAction<Theme>>
+	theme?: Theme;
+	setTheme?: React.Dispatch<React.SetStateAction<Theme>>;
 };
 
-export const ThemeContext = createContext<ThemeContextType>({theme:"bright", setTheme:undefined});
+export const ThemeContext = createContext<ThemeContextType>({ theme: "bright", setTheme: undefined });
 
 export default function App({ Component, pageProps }: AppProps) {
-	const [theme, setTheme]= useState<Theme>("bright");
+	const [theme, setTheme] = useState<Theme>("bright");
 
 	useEffect(() => {
 		if (!localStorage.getItem("fontSize")) {
