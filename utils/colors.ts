@@ -1,13 +1,9 @@
 import { Theme } from "../pages/_app";
 
-interface Colors {
-	primary: string;
-	secondary: string;
-	text: string;
-	invert: string;
-}
+type CssVariableName = "primary" | "secondary" | "text" | "invert";
+type CssVariables = { [key in CssVariableName]: string };
 
-const colors: Record<Theme, Colors> = {
+const colors: Record<Theme, CssVariables> = {
 	bright: {
 		primary: "#EC7373",
 		secondary: "#FFFFFF",
