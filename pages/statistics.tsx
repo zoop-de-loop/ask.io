@@ -16,7 +16,7 @@ export default function Statistics() {
 
 	return (
 		<main>
-			<div className={styles["stats"]}>{stats}</div>
+			<div className={styles.stats}>{stats}</div>
 		</main>
 	);
 }

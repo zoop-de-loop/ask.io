@@ -7,7 +7,7 @@ interface Props {
 
 export default function Button({ children, ...rest }: PropsWithChildren<Props>) {
 	return (
-		<button className={styles["button"]} {...rest}>
+		<button className={styles.button} {...rest}>
 			{children}
 		</button>
 	);

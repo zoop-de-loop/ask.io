@@ -15,7 +15,7 @@ export default function CreateAskForm() {
 				<input type='text' placeholder='Type here...' />
 				<label htmlFor='anonymous'>
 					<input type='checkbox' id='anonymous' onClick={handleAnonymousChange} />
-					<span className={styles["checkbox"]}>{isAnonymous && "✓"}</span>
+					<span className={styles.checkbox}>{isAnonymous && "✓"}</span>
 					Anonymous
 				</label>
 			</fieldset>

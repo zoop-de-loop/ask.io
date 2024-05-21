@@ -37,13 +37,13 @@ export default function Asks() {
 	}, [showOnlyLikedAsks]);
 
 	return (
-		<main className={styles["main"]}>
-			<div className={styles["asks"]}>{askElements}</div>
-			<div className={styles["buttons"]}>
-				<button className={styles["outlined"]} onClick={toggleLike}>
+		<main className={styles.main}>
+			<div className={styles.asks}>{askElements}</div>
+			<div className={styles.buttons}>
+				<button className={styles.outlined} onClick={toggleLike}>
 					{showOnlyLikedAsks ? "Show All Asks" : "Show liked Asks"}
 				</button>
-				<button className={styles["filled"]} onClick={handleAskClick}>
+				<button className={styles.filled} onClick={handleAskClick}>
 					Ask
 				</button>
 			</div>

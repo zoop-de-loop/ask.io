@@ -4,7 +4,7 @@ import FontSizeCounterInput from "../components/settings/FontSizeCounterInput";
 
 export default function Settings() {
 	return (
-		<main id={styles["main"]}>
+		<main id={styles.main}>
 			<section>
 				<h2>theme - </h2>
 				<ThemeButton />

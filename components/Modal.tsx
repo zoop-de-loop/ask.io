@@ -34,7 +34,7 @@ export default function Modal({ children, isOpen, setIsOpen }: PropsWithChildren
 	if (!isOpen) return;
 
 	return (
-		<dialog ref={ref} className={styles["modal"]} onClick={handleBackgroundClicked} onKeyDown={handleKeyDown}>
+		<dialog ref={ref} className={styles.modal} onClick={handleBackgroundClicked} onKeyDown={handleKeyDown}>
 			{children}
 		</dialog>
 	);

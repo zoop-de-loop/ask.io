@@ -7,7 +7,7 @@ import LinkCard from "../components/LinkCard";
 
 export default function Home() {
 	return (
-		<main className={styles["main"]}>
+		<main className={styles.main}>
 			<div className={styles["page-links"]}>
 				<LinkCard name='Asks' url='/asks' icon={<AsksIcon />} />
 				<LinkCard name='Statistics' url='/statistics' icon={<StatisticsIcon />} />

@@ -1,8 +1,7 @@
-
 import { useState } from "react";
-import styles from '../../styles/components/account/account-user-name.module.scss'
+import styles from "../../styles/components/account/account-user-name.module.scss";
 
-export default function AccountUserName({ defaultUserName}: {defaultUserName :string}) {
+export default function AccountUserName({ defaultUserName }: { defaultUserName: string }) {
 	const [isEditing, setIsEditing] = useState(false);
 	const [userName, setUserName] = useState(defaultUserName);
 
@@ -14,7 +13,7 @@ export default function AccountUserName({ defaultUserName}: {defaultUserName :st
 				<span title={userName}>{userName}</span>
 			)}
 
-			<button className={styles["filled"]} onClick={() => setIsEditing((prev) => !prev)}>
+			<button className={styles.filled} onClick={() => setIsEditing((prev) => !prev)}>
 				{isEditing ? "Save" : "Edit"}
 			</button>
 		</section>
