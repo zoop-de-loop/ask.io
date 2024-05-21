@@ -6,7 +6,7 @@ interface Props {
 	setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Modal = ({ children, isOpen, setIsOpen }: PropsWithChildren<Props>) => {
+export default function Modal({ children, isOpen, setIsOpen }: PropsWithChildren<Props>) {
 	const ref = useRef<HTMLDialogElement>(null);
 
 	useEffect(() => {
@@ -38,6 +38,4 @@ const Modal = ({ children, isOpen, setIsOpen }: PropsWithChildren<Props>) => {
 			{children}
 		</dialog>
 	);
-};
-
-export default Modal;
+}
