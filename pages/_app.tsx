@@ -30,10 +30,10 @@ export default function App({ Component, pageProps }: AppProps) {
 	}, []);
 
 	useEffect(() => {
-		document.documentElement.style.setProperty("--primary-color", THEME_CSS_VARIABLES[theme].primary);
-		document.documentElement.style.setProperty("--secondary-color", THEME_CSS_VARIABLES[theme].secondary);
-		document.documentElement.style.setProperty("--text-color", THEME_CSS_VARIABLES[theme].text);
-		document.documentElement.style.setProperty("--invert", THEME_CSS_VARIABLES[theme].invert);
+		document.documentElement.style.setProperty("--primary-color", THEME_CSS_VARIABLES[theme]["primary-color"]);
+		document.documentElement.style.setProperty("--secondary-color", THEME_CSS_VARIABLES[theme]["secondary-color"]);
+		document.documentElement.style.setProperty("--text-color", THEME_CSS_VARIABLES[theme]["text-color"]);
+		document.documentElement.style.setProperty("--invert", THEME_CSS_VARIABLES[theme]["invert-images"]);
 		document.documentElement.style.setProperty("--font-size", `${localStorage.getItem("fontSize")}px`);
 	}, [theme]);
 
