@@ -1,7 +1,9 @@
-import styles from "@/styles/pages/statistics.module.scss";
-import Stat from "@/components/Stat";
+import styles from "../styles/pages/statistics.module.scss";
+import Stat from "../components/Stat";
 
-const data = [
+type Data = { id: number; amount: number; name: string };
+
+const data: Data[] = [
 	{ id: 0, amount: 19, name: "all asks" },
 	{ id: 1, amount: 7, name: "my asks" },
 	{ id: 2, amount: 3, name: "liked asks" },

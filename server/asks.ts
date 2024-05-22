@@ -1,4 +1,11 @@
-const asks = {
+type Ask = {
+	content: string;
+	isLiked: boolean;
+	isAnonymous: boolean;
+	userId: string;
+};
+
+const asks: Record<number, Ask> = {
 	0: { content: "Can a dog love me?", isLiked: false, isAnonymous: true, userId: "214194623" },
 	1: { content: "Can a dog love me?", isLiked: true, isAnonymous: true, userId: "214194623" },
 	2: { content: "Can a dog love me?", isLiked: false, isAnonymous: true, userId: "214194623" },

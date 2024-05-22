@@ -1,7 +1,9 @@
 import { useState } from "react";
-import styles from "@/styles/components/account/account-user-name.module.scss";
+import styles from "../../styles/components/account/account-user-name.module.scss";
 
-export default function AccountUserName({ defaultUserName }) {
+type Props = { defaultUserName: string };
+
+export default function AccountUserName({ defaultUserName }: Props) {
 	const [isEditing, setIsEditing] = useState(false);
 	const [userName, setUserName] = useState(defaultUserName);
 

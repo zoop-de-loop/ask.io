@@ -1,6 +1,9 @@
-import styles from "@/styles/components/link-card.module.scss";
+import { ReactElement } from "react";
+import styles from "../styles/components/link-card.module.scss";
 
-export default function LinkCard({ name, url, icon }) {
+type Props = { name: string; url: string; icon: ReactElement };
+
+export default function LinkCard({ name, url, icon }: Props) {
 	return (
 		<a className={styles["link-card"]} href={url}>
 			<h2>{name}</h2>

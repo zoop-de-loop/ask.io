@@ -1,6 +1,6 @@
-import styles from "@/styles/pages/settings.module.scss";
-import ThemeButton from "@/components/settings/ThemeButton";
-import FontSizeCounterInput from "@/components/settings/FontSizeCounterInput";
+import styles from "../styles/pages/settings.module.scss";
+import ThemeButton from "../components/settings/ThemeButton";
+import FontSizeCounterInput from "../components/settings/FontSizeCounterInput";
 
 export default function Settings() {
 	return (

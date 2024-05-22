@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": false,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "target": "es2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "paths": {
+    "react": [ "./node_modules/@types/react" ],
+    "@/*": ["./*"]
+  },
+  
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
