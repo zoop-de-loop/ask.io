@@ -1,6 +1,5 @@
 import AccountInfo from "./AccountInfo";
 import styles from "../styles/components/header.module.scss";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Header() {
